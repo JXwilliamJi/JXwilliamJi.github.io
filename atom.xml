@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-12T07:47:36.233Z</updated>
+  <updated>2018-10-12T07:57:33.293Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2018/10/12/Unity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"/>
-    <id>http://yoursite.com/2018/10/12/Unity 学习(一)/</id>
-    <published>2018-10-12T07:47:36.233Z</published>
-    <updated>2018-10-12T07:47:36.233Z</updated>
+    <title>Unity 学习(一)</title>
+    <link href="http://yoursite.com/2018/10/11/Unity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"/>
+    <id>http://yoursite.com/2018/10/11/Unity 学习(一)/</id>
+    <published>2018-10-11T08:09:39.000Z</published>
+    <updated>2018-10-12T07:57:33.293Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Unity-下载"><a href="#Unity-下载" class="headerlink" title="Unity 下载"></a>Unity 下载</h2><p>建议下载 个人版</p><p><a href="https://store.unity.com/products/unity-personal?_ga=2.170905952.1914627832.1539259756-39692342.1530083881" target="_blank" rel="noopener">https://store.unity.com/products/unity-personal?_ga=2.170905952.1914627832.1539259756-39692342.1530083881</a></p><h2 id="Unity-启动"><a href="#Unity-启动" class="headerlink" title="Unity 启动"></a>Unity 启动</h2><p><img src="/2018/10/12/Unity 学习(一)/CreateNew.png" alt=""></p><h2 id="Unity-界面介绍"><a href="#Unity-界面介绍" class="headerlink" title="Unity 界面介绍"></a>Unity 界面介绍</h2><p><img src="/2018/10/12/Unity 学习(一)/Unity基本面板介绍.jpg" alt="基本面板"></p><h2 id="Unity-设置栏介绍"><a href="#Unity-设置栏介绍" class="headerlink" title="Unity 设置栏介绍"></a>Unity 设置栏介绍</h2><h3 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a>Unity</h3><p><img src="/2018/10/12/Unity 学习(一)/UnitySetting.png" alt="设置栏"></p><h4 id="Unity-Preferences"><a href="#Unity-Preferences" class="headerlink" title="Unity Preferences"></a>Unity Preferences</h4><p>General</p><p><img src="/2018/10/12/Unity 学习(一)/General.png" alt="xx"></p><p>External Tool</p><p><img src="/2018/10/12/Unity 学习(一)/Preference_ExternalTool.png" alt="xx"></p><p>Color</p><p><img src="/2018/10/12/Unity 学习(一)/Preference_Color.png" alt=""></p><p>GI Cache</p><p><img src="/2018/10/12/Unity 学习(一)/Preference_Cache.png" alt=""></p><p>2D</p><p><img src="/2018/10/12/Unity 学习(一)/Preference_2D.png" alt=""></p><p>Cache Server</p><p><img src="/2018/10/12/Unity 学习(一)/Preference_CacheServer.png" alt=""></p><h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p><img src="/2018/10/12/Unity 学习(一)/Unity_File.png" alt=""></p><p>BuildSetting</p><p><img src="/2018/10/12/Unity 学习(一)/File_BuildSetting.png" alt=""></p><h3 id="Asset"><a href="#Asset" class="headerlink" title="Asset"></a>Asset</h3><p><img src="/2018/10/12/Unity 学习(一)/Asset_List.png" alt=""></p><h2 id="其他介绍"><a href="#其他介绍" class="headerlink" title="其他介绍"></a>其他介绍</h2><h3 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h3><p><img src="/2018/10/12/Unity 学习(一)/基本操作.png" alt=""></p><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><img src="/2018/10/12/Unity 学习(一)/Others.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Unity-下载"><a href="#Unity-下载" class="headerlink" title="Unity 下载"></a>Unity 下载</h2><p>建议下载 个人版</p><p><a href="https://store.unity.com/products/unity-personal?_ga=2.170905952.1914627832.1539259756-39692342.1530083881" target="_blank" rel="noopener">https://store.unity.com/products/unity-personal?_ga=2.170905952.1914627832.1539259756-39692342.1530083881</a></p><h2 id="Unity-启动"><a href="#Unity-启动" class="headerlink" title="Unity 启动"></a>Unity 启动</h2><p><img src="/2018/10/11/Unity 学习(一)/CreateNew.png" alt=""></p><h2 id="Unity-界面介绍"><a href="#Unity-界面介绍" class="headerlink" title="Unity 界面介绍"></a>Unity 界面介绍</h2><p><img src="/2018/10/11/Unity 学习(一)/Unity基本面板介绍.jpg" alt="基本面板"></p><h2 id="Unity-设置栏介绍"><a href="#Unity-设置栏介绍" class="headerlink" title="Unity 设置栏介绍"></a>Unity 设置栏介绍</h2><h3 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a>Unity</h3><p><img src="/2018/10/11/Unity 学习(一)/UnitySetting.png" alt="设置栏"></p><h4 id="Unity-Preferences"><a href="#Unity-Preferences" class="headerlink" title="Unity Preferences"></a>Unity Preferences</h4><p>General</p><p><img src="/2018/10/11/Unity 学习(一)/General.png" alt="xx"></p><p>External Tool</p><p><img src="/2018/10/11/Unity 学习(一)/Preference_ExternalTool.png" alt="xx"></p><p>Color</p><p><img src="/2018/10/11/Unity 学习(一)/Preference_Color.png" alt=""></p><p>GI Cache</p><p><img src="/2018/10/11/Unity 学习(一)/Preference_Cache.png" alt=""></p><p>2D</p><p><img src="/2018/10/11/Unity 学习(一)/Preference_2D.png" alt=""></p><p>Cache Server</p><p><img src="/2018/10/11/Unity 学习(一)/Preference_CacheServer.png" alt=""></p><h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p><img src="/2018/10/11/Unity 学习(一)/Unity_File.png" alt=""></p><p>BuildSetting</p><p><img src="/2018/10/11/Unity 学习(一)/File_BuildSetting.png" alt=""></p><h3 id="Asset"><a href="#Asset" class="headerlink" title="Asset"></a>Asset</h3><p><img src="/2018/10/11/Unity 学习(一)/Asset_List.png" alt=""></p><h2 id="其他介绍"><a href="#其他介绍" class="headerlink" title="其他介绍"></a>其他介绍</h2><h3 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h3><p><img src="/2018/10/11/Unity 学习(一)/基本操作.png" alt=""></p><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><img src="/2018/10/11/Unity 学习(一)/Others.png" alt=""></p>]]></content>
     
     <summary type="html">
     
@@ -35,6 +35,12 @@
     
     </summary>
     
+      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
+    
+    
+      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
     
   </entry>
   

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2018%2F10%2F12%2FUnity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)%2F</url>
+    <title><![CDATA[Unity 学习(一)]]></title>
+    <url>%2F2018%2F10%2F11%2FUnity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)%2F</url>
     <content type="text"><![CDATA[Unity 下载建议下载 个人版 https://store.unity.com/products/unity-personal?_ga=2.170905952.1914627832.1539259756-39692342.1530083881 Unity 启动 Unity 界面介绍 Unity 设置栏介绍Unity Unity PreferencesGeneral External Tool Color GI Cache 2D Cache Server File BuildSetting Asset 其他介绍坐标 其他]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>Unity</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[移动端游戏开发分析]]></title>
