@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-12T08:02:55.420Z</updated>
+  <updated>2018-10-15T01:55:26.241Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS常见访问地址</title>
+    <link href="http://yoursite.com/2018/10/15/iOS%E5%B8%B8%E8%A7%81%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/"/>
+    <id>http://yoursite.com/2018/10/15/iOS常见访问地址/</id>
+    <published>2018-10-15T01:57:48.000Z</published>
+    <updated>2018-10-15T01:55:26.241Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-appleID登录地址"><a href="#1-appleID登录地址" class="headerlink" title="1. appleID登录地址"></a>1. appleID登录地址</h2><p><a href="https://appleid.apple.com/" target="_blank" rel="noopener">https://appleid.apple.com/</a></p><h2 id="2-苹果开发者账号"><a href="#2-苹果开发者账号" class="headerlink" title="2. 苹果开发者账号"></a>2. 苹果开发者账号</h2><p><a href="https://developer.apple.com/account/#/overview/G9AP62BQZD" target="_blank" rel="noopener">https://developer.apple.com/account/#/overview/G9AP62BQZD</a></p><h2 id="3-购买688元套餐地址"><a href="#3-购买688元套餐地址" class="headerlink" title="3. 购买688元套餐地址"></a>3. 购买688元套餐地址</h2><p><a href="https://developer.apple.com/enroll/cn" target="_blank" rel="noopener">https://developer.apple.com/enroll/cn</a></p><h2 id="4-苹果上架App-管理地址"><a href="#4-苹果上架App-管理地址" class="headerlink" title="4. 苹果上架App 管理地址"></a>4. 苹果上架App 管理地址</h2><p><a href="https://appstoreconnect.apple.com/" target="_blank" rel="noopener">https://appstoreconnect.apple.com/</a></p><h2 id="5-苹果iTunes下载地址"><a href="#5-苹果iTunes下载地址" class="headerlink" title="5. 苹果iTunes下载地址"></a>5. 苹果iTunes下载地址</h2><p><a href="https://itunes.apple.com/cn/genre/ios/id36?mt=8" target="_blank" rel="noopener">https://itunes.apple.com/cn/genre/ios/id36?mt=8</a></p><h2 id="4-苹果开源源码地址"><a href="#4-苹果开源源码地址" class="headerlink" title="4. 苹果开源源码地址"></a>4. 苹果开源源码地址</h2><p><a href="https://opensource.apple.com/tarballs/" target="_blank" rel="noopener">https://opensource.apple.com/tarballs/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-appleID登录地址&quot;&gt;&lt;a href=&quot;#1-appleID登录地址&quot; class=&quot;headerlink&quot; title=&quot;1. appleID登录地址&quot;&gt;&lt;/a&gt;1. appleID登录地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://appleid
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS App扫码下载</title>
+    <link href="http://yoursite.com/2018/10/14/iOS%20App%E6%89%AB%E7%A0%81%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yoursite.com/2018/10/14/iOS App扫码下载/</id>
+    <published>2018-10-14T01:57:48.000Z</published>
+    <updated>2018-10-15T01:55:42.574Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-第一步-准备一个https的服务器"><a href="#1-第一步-准备一个https的服务器" class="headerlink" title="1. 第一步 准备一个https的服务器"></a>1. 第一步 准备一个https的服务器</h2><p>本人是腾讯云的账户,搭建了https的环境</p><p>怎么搭建可以访问腾讯云 云+社区 开发者实验室 ,搜索ssl</p><h2 id="2-第二步-打包-准备plist"><a href="#2-第二步-打包-准备plist" class="headerlink" title="2. 第二步 打包,准备plist"></a>2. 第二步 打包,准备plist</h2><h3 id="2-1-打包"><a href="#2-1-打包" class="headerlink" title="2.1 打包"></a>2.1 打包</h3><p>生成ipa包,</p><p>貌似只有在开发者账户里面的用户可以安装,其他用户最后校验失败会导致安装失败</p><h3 id="2-2-准备plist"><a href="#2-2-准备plist" class="headerlink" title="2.2 准备plist"></a>2.2 准备plist</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;items&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;assets&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;kind&lt;/key&gt;</span><br><span class="line">&lt;string&gt;software-package&lt;/string&gt;</span><br><span class="line">&lt;key&gt;url&lt;/key&gt;</span><br><span class="line">&lt;string&gt;http://123.206.68.204:1111/maarrytask.ipa&lt;/string&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;kind&lt;/key&gt;</span><br><span class="line">&lt;string&gt;full-size-image&lt;/string&gt;</span><br><span class="line">&lt;key&gt;needs-shine&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br><span class="line">&lt;key&gt;url&lt;/key&gt;</span><br><span class="line">&lt;string&gt;&lt;/string&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;kind&lt;/key&gt;</span><br><span class="line">&lt;string&gt;display-image&lt;/string&gt;</span><br><span class="line">&lt;key&gt;needs-shine&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br><span class="line">&lt;key&gt;url&lt;/key&gt;</span><br><span class="line">&lt;string&gt;安装过程显示图片&lt;/string&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;key&gt;metadata&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;bundle-identifier&lt;/key&gt;</span><br><span class="line">&lt;string&gt;com.techotc.DigitSign&lt;/string&gt;</span><br><span class="line">&lt;key&gt;bundle-version&lt;/key&gt;</span><br><span class="line">&lt;string&gt;1.0&lt;/string&gt;</span><br><span class="line">&lt;key&gt;kind&lt;/key&gt;</span><br><span class="line">&lt;string&gt;software&lt;/string&gt;</span><br><span class="line">&lt;key&gt;title&lt;/key&gt;</span><br><span class="line">&lt;string&gt;packName&lt;/string&gt;</span><br><span class="line">&lt;key&gt;subtitle&lt;/key&gt;</span><br><span class="line">&lt;string&gt;副标题&lt;/string&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br></pre></td></tr></table></figure><ul><li>bundle-identifier 必须修改</li><li>title   必须修改,改成包名/或者修改名</li><li>bundle-version  最好也修改下</li><li>url  必须要修改,修改为域名下地址</li><li>display-image 一般需要修改为Logo的图片地址</li></ul><h3 id="2-3-上传到服务器"><a href="#2-3-上传到服务器" class="headerlink" title="2.3 上传到服务器"></a>2.3 上传到服务器</h3><p>本人上传到https的根目录</p><p>具体是/usr/share/nginx/html</p><p>通过mac的ssh远程拷贝过去</p><p>命令:</p><p><code>scp /Users/yourname/Desktop/xxx.ipa root@123.206.68.xx:/usr/share/nginx/html/xx.ipa</code></p><p><code>scp /Users/yourname/Desktop/xxx.plist root@123.206.68.xx:/usr/share/nginx/html/xx.plist</code></p><p>需要输入服务器root密码</p><h3 id="2-4-配置修改"><a href="#2-4-配置修改" class="headerlink" title="2.4 配置修改"></a>2.4 配置修改</h3><p>将plist的url修改为<a href="https://yourdomain/xxx.ipa" target="_blank" rel="noopener">https://yourdomain/xxx.ipa</a></p><h3 id="2-5-测试"><a href="#2-5-测试" class="headerlink" title="2.5 测试"></a>2.5 测试</h3><p>直接访问 <a href="https://yourdomain/xxx.plist" target="_blank" rel="noopener">https://yourdomain/xxx.plist</a> 检验是否可以直接访问</p><h2 id="5-准备一个下载页面"><a href="#5-准备一个下载页面" class="headerlink" title="5. 准备一个下载页面"></a>5. 准备一个下载页面</h2><h2 id="5-1-核心代码"><a href="#5-1-核心代码" class="headerlink" title="5.1 核心代码"></a>5.1 核心代码</h2><p>跳转的核心代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;itms-services://?action=download-manifest&amp;amp;url=https://yourdomain/xxx.plist&quot;&gt;点击下载&lt;/a&gt;</span><br></pre></td></tr></table></figure><h2 id="5-2-上传到服务器"><a href="#5-2-上传到服务器" class="headerlink" title="5.2 上传到服务器"></a>5.2 上传到服务器</h2><p><code>scp /Users/yourname/Desktop/download.html root@123.206.68.xx:/usr/share/nginx/html/download.html</code></p><h2 id="5-3-生成二维码"><a href="#5-3-生成二维码" class="headerlink" title="5.3 生成二维码"></a>5.3 生成二维码</h2><p>首先测试 <a href="https://yourdomain/download.html可以正常访问" target="_blank" rel="noopener">https://yourdomain/download.html可以正常访问</a></p><p>使用草料二维码生成,也可以自己使用coreImage</p><h2 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h2><p><a href="https://blog.csdn.net/pzlsun/article/details/52080491" target="_blank" rel="noopener">https://blog.csdn.net/pzlsun/article/details/52080491</a></p><p><a href="https://blog.csdn.net/klshuo/article/details/50485038" target="_blank" rel="noopener">https://blog.csdn.net/klshuo/article/details/50485038</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-第一步-准备一个https的服务器&quot;&gt;&lt;a href=&quot;#1-第一步-准备一个https的服务器&quot; class=&quot;headerlink&quot; title=&quot;1. 第一步 准备一个https的服务器&quot;&gt;&lt;/a&gt;1. 第一步 准备一个https的服务器&lt;/h2&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>Unity 学习(一)</title>
@@ -239,9 +289,9 @@
     <link href="http://yoursite.com/2018/09/13/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%962/"/>
     <id>http://yoursite.com/2018/09/13/Hexo NexT主题优化2/</id>
     <published>2018-09-13T08:30:32.000Z</published>
-    <updated>2018-10-10T01:20:55.842Z</updated>
+    <updated>2018-10-12T09:06:20.253Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h2><p>登录 <a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>, 找到喜欢的音乐或者歌单,点击 <code>生成外链播放器</code>, 选择iframe 插件</p><p>选择 尺寸 , 播放模式, 复制html 代码,然后粘贴到你需要的文件中</p><p>比如我希望在侧栏的Links后面,所以粘贴到的位置是 <code>/hexo/themes/next/layout/_macro/sidebar.swig</code></p><p>找到如下代码,粘贴在后面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include &apos;../_custom/sidebar.swig&apos; %&#125;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/section&gt;</span><br></pre></td></tr></table></figure><h2 id="Hexo-添加封面"><a href="#Hexo-添加封面" class="headerlink" title="Hexo 添加封面"></a>Hexo 添加封面</h2><p>这里只讨论拥有服务器,和域名的情况</p><p>修改博客的域名解析为 blog.youdomain.com</p><p>在自己的服务器部署nginx,添加www的域名解析指向nginx,具体步骤可以看下面的网址</p><p><a href="https://cloud.tencent.com/developer/labs/lab/10068" target="_blank" rel="noopener">https://cloud.tencent.com/developer/labs/lab/10068</a></p><p>nginx 默认的地址是 <code>usr/share/ngin/html/</code></p><p>只需要修改<code>index.html</code>即可</p><p>效果查看<a href="https://www.williamlovealisa.cn" target="_blank" rel="noopener">https://www.williamlovealisa.cn</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h2><p>登录 <a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>, 找到喜欢的音乐或者歌单,点击 <code>生成外链播放器</code>, 选择iframe 插件</p><p>选择 尺寸 , 播放模式, 复制html 代码,然后粘贴到你需要的文件中</p><p>比如我希望在侧栏的Links后面,所以粘贴到的位置是 <code>/hexo/themes/next/layout/_macro/sidebar.swig</code></p><p>找到如下代码,粘贴在后面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include &apos;../_custom/sidebar.swig&apos; %&#125;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/section&gt;</span><br></pre></td></tr></table></figure><h2 id="Hexo-添加封面"><a href="#Hexo-添加封面" class="headerlink" title="Hexo 添加封面"></a>Hexo 添加封面</h2><p>这里只讨论拥有服务器,和域名的情况</p><p>修改博客的域名解析为 blog.youdomain.com</p><p>在自己的服务器部署nginx,添加www的域名解析指向nginx,具体步骤可以看下面的网址</p><p><a href="https://cloud.tencent.com/developer/labs/lab/10068" target="_blank" rel="noopener">https://cloud.tencent.com/developer/labs/lab/10068</a></p><p>nginx 默认的地址是 <code>usr/share/ngin/html/</code></p><p>只需要修改<code>index.html</code>即可</p><p>里面的图片可以到<a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">http://fontawesome.dashgame.com/</a>中查找,在前面加上<code>fa_</code>前缀即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-youtube-play vhm-item&quot;&gt;&lt;/i&gt;</span><br></pre></td></tr></table></figure><p>效果查看<a href="https://www.williamlovealisa.cn" target="_blank" rel="noopener">https://www.williamlovealisa.cn</a></p>]]></content>
     
     <summary type="html">
     

@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS常见访问地址]]></title>
+    <url>%2F2018%2F10%2F15%2FiOS%E5%B8%B8%E8%A7%81%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80%2F</url>
+    <content type="text"><![CDATA[1. appleID登录地址https://appleid.apple.com/ 2. 苹果开发者账号https://developer.apple.com/account/#/overview/G9AP62BQZD 3. 购买688元套餐地址https://developer.apple.com/enroll/cn 4. 苹果上架App 管理地址https://appstoreconnect.apple.com/ 5. 苹果iTunes下载地址https://itunes.apple.com/cn/genre/ios/id36?mt=8 4. 苹果开源源码地址https://opensource.apple.com/tarballs/]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[iOS App扫码下载]]></title>
+    <url>%2F2018%2F10%2F14%2FiOS%20App%E6%89%AB%E7%A0%81%E4%B8%8B%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[1. 第一步 准备一个https的服务器本人是腾讯云的账户,搭建了https的环境 怎么搭建可以访问腾讯云 云+社区 开发者实验室 ,搜索ssl 2. 第二步 打包,准备plist2.1 打包生成ipa包, 貌似只有在开发者账户里面的用户可以安装,其他用户最后校验失败会导致安装失败 2.2 准备plist12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;&lt;plist version=&quot;1.0&quot;&gt;&lt;dict&gt; &lt;key&gt;items&lt;/key&gt; &lt;array&gt; &lt;dict&gt; &lt;key&gt;assets&lt;/key&gt; &lt;array&gt; &lt;dict&gt; &lt;key&gt;kind&lt;/key&gt; &lt;string&gt;software-package&lt;/string&gt; &lt;key&gt;url&lt;/key&gt; &lt;string&gt;http://123.206.68.204:1111/maarrytask.ipa&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;kind&lt;/key&gt; &lt;string&gt;full-size-image&lt;/string&gt; &lt;key&gt;needs-shine&lt;/key&gt; &lt;false/&gt; &lt;key&gt;url&lt;/key&gt; &lt;string&gt;&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;kind&lt;/key&gt; &lt;string&gt;display-image&lt;/string&gt; &lt;key&gt;needs-shine&lt;/key&gt; &lt;false/&gt; &lt;key&gt;url&lt;/key&gt; &lt;string&gt;安装过程显示图片&lt;/string&gt; &lt;/dict&gt; &lt;/array&gt; &lt;key&gt;metadata&lt;/key&gt; &lt;dict&gt; &lt;key&gt;bundle-identifier&lt;/key&gt; &lt;string&gt;com.techotc.DigitSign&lt;/string&gt; &lt;key&gt;bundle-version&lt;/key&gt; &lt;string&gt;1.0&lt;/string&gt; &lt;key&gt;kind&lt;/key&gt; &lt;string&gt;software&lt;/string&gt; &lt;key&gt;title&lt;/key&gt; &lt;string&gt;packName&lt;/string&gt; &lt;key&gt;subtitle&lt;/key&gt; &lt;string&gt;副标题&lt;/string&gt; &lt;/dict&gt; &lt;/dict&gt; &lt;/array&gt;&lt;/dict&gt;&lt;/plist&gt; bundle-identifier 必须修改 title 必须修改,改成包名/或者修改名 bundle-version 最好也修改下 url 必须要修改,修改为域名下地址 display-image 一般需要修改为Logo的图片地址 2.3 上传到服务器本人上传到https的根目录 具体是/usr/share/nginx/html 通过mac的ssh远程拷贝过去 命令: scp /Users/yourname/Desktop/xxx.ipa root@123.206.68.xx:/usr/share/nginx/html/xx.ipa scp /Users/yourname/Desktop/xxx.plist root@123.206.68.xx:/usr/share/nginx/html/xx.plist 需要输入服务器root密码 2.4 配置修改将plist的url修改为https://yourdomain/xxx.ipa 2.5 测试直接访问 https://yourdomain/xxx.plist 检验是否可以直接访问 5. 准备一个下载页面5.1 核心代码跳转的核心代码 1&lt;a href=&quot;itms-services://?action=download-manifest&amp;amp;url=https://yourdomain/xxx.plist&quot;&gt;点击下载&lt;/a&gt; 5.2 上传到服务器scp /Users/yourname/Desktop/download.html root@123.206.68.xx:/usr/share/nginx/html/download.html 5.3 生成二维码首先测试 https://yourdomain/download.html可以正常访问 使用草料二维码生成,也可以自己使用coreImage 6. 参考文档https://blog.csdn.net/pzlsun/article/details/52080491 https://blog.csdn.net/klshuo/article/details/50485038]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Unity 学习(一)]]></title>
     <url>%2F2018%2F10%2F11%2FUnity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)%2F</url>
     <content type="text"><![CDATA[Unity 下载建议下载 个人版 https://store.unity.com/products/unity-personal?_ga=2.170905952.1914627832.1539259756-39692342.1530083881 Unity 启动 Unity 界面介绍 Unity 设置栏介绍Unity Unity PreferencesGeneral External Tool Color GI Cache 2D Cache Server File BuildSetting Asset 其他介绍坐标 其他]]></content>
@@ -95,7 +117,7 @@
   <entry>
     <title><![CDATA[Hexo NexT主题优化2]]></title>
     <url>%2F2018%2F09%2F13%2FHexo%20NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%962%2F</url>
-    <content type="text"><![CDATA[添加音乐登录 网易云音乐, 找到喜欢的音乐或者歌单,点击 生成外链播放器, 选择iframe 插件 选择 尺寸 , 播放模式, 复制html 代码,然后粘贴到你需要的文件中 比如我希望在侧栏的Links后面,所以粘贴到的位置是 /hexo/themes/next/layout/_macro/sidebar.swig 找到如下代码,粘贴在后面 123&#123;% include &apos;../_custom/sidebar.swig&apos; %&#125; &lt;/div&gt; &lt;/section&gt; Hexo 添加封面这里只讨论拥有服务器,和域名的情况 修改博客的域名解析为 blog.youdomain.com 在自己的服务器部署nginx,添加www的域名解析指向nginx,具体步骤可以看下面的网址 https://cloud.tencent.com/developer/labs/lab/10068 nginx 默认的地址是 usr/share/ngin/html/ 只需要修改index.html即可 效果查看https://www.williamlovealisa.cn]]></content>
+    <content type="text"><![CDATA[添加音乐登录 网易云音乐, 找到喜欢的音乐或者歌单,点击 生成外链播放器, 选择iframe 插件 选择 尺寸 , 播放模式, 复制html 代码,然后粘贴到你需要的文件中 比如我希望在侧栏的Links后面,所以粘贴到的位置是 /hexo/themes/next/layout/_macro/sidebar.swig 找到如下代码,粘贴在后面 123&#123;% include &apos;../_custom/sidebar.swig&apos; %&#125; &lt;/div&gt; &lt;/section&gt; Hexo 添加封面这里只讨论拥有服务器,和域名的情况 修改博客的域名解析为 blog.youdomain.com 在自己的服务器部署nginx,添加www的域名解析指向nginx,具体步骤可以看下面的网址 https://cloud.tencent.com/developer/labs/lab/10068 nginx 默认的地址是 usr/share/ngin/html/ 只需要修改index.html即可 里面的图片可以到http://fontawesome.dashgame.com/中查找,在前面加上fa_前缀即可 1&lt;i class=&quot;fa fa-youtube-play vhm-item&quot;&gt;&lt;/i&gt; 效果查看https://www.williamlovealisa.cn]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
