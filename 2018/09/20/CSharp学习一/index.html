@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
 <meta property="og:description" content="安装Visual Studio Code优点: 轻量级 官网下载最新版本 https://code.visualstudio.com/ .Net 和 C#.Net 一是指 微软提供的一整套平台, 二是指具体的.net.framework 运行库 C# 是依赖于net.framework的语言 Mac环境下 VS如何运行C#下载库dot net core 安装运行. 按照步骤一步步来即可 遇到的问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T15:05:14.322Z">
+<meta property="og:updated_time" content="2018-10-15T03:01:53.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSharp学习一">
 <meta name="twitter:description" content="安装Visual Studio Code优点: 轻量级 官网下载最新版本 https://code.visualstudio.com/ .Net 和 C#.Net 一是指 微软提供的一整套平台, 二是指具体的.net.framework 运行库 C# 是依赖于net.framework的语言 Mac环境下 VS如何运行C#下载库dot net core 安装运行. 按照步骤一步步来即可 遇到的问题">
@@ -422,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  356
+                  431
                 </span>
               
 
@@ -489,6 +489,9 @@
 <h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2><p>重启命令行</p>
 <p><code>dotnet new console -o myApp &amp; cd myApp</code></p>
 <p><code>dotnet run</code></p>
+<h2 id="配置VC-Code"><a href="#配置VC-Code" class="headerlink" title="配置VC Code"></a>配置VC Code</h2><h3 id="终端控制台打印"><a href="#终端控制台打印" class="headerlink" title="终端控制台打印"></a>终端控制台打印</h3><p>我运行调试的时候,终端和控制台来回打开,并且输入是,终端和控制台都无法接收输入信息</p>
+<p>点击调试按钮旁边的齿轮, 出现<code>launch.json</code></p>
+<p>找到<code>console</code> 修改参数为 <code>integratedTerminal</code> 即可</p>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p>在mac上使用VS Code编写C#应用程序<a href="https://www.jianshu.com/p/d8f63e1aef08" target="_blank" rel="noopener">https://www.jianshu.com/p/d8f63e1aef08</a></p>
 <p>在mac上运行 mono  <a href="https://blog.csdn.net/xzx_kag/article/details/78445894" target="_blank" rel="noopener">https://blog.csdn.net/xzx_kag/article/details/78445894</a></p>
 
@@ -511,7 +514,7 @@
   <p><span>本文标题:</span><a href="/2018/09/20/CSharp学习一/">CSharp学习一</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年09月20日 - 16:09</p>
-  <p><span>最后更新:</span>2018年09月30日 - 23:09</p>
+  <p><span>最后更新:</span>2018年10月15日 - 11:10</p>
   <p><span>原始链接:</span><a href="/2018/09/20/CSharp学习一/" title="CSharp学习一">http://yoursite.com/2018/09/20/CSharp学习一/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/09/20/CSharp学习一/"  aria-label="复制成功！"></i></span>
   </p>
@@ -838,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Visual-Studio-Code"><span class="nav-number">1.</span> <span class="nav-text">安装Visual Studio Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Net-和-C"><span class="nav-number">2.</span> <span class="nav-text">.Net 和 C#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac环境下-VS如何运行C"><span class="nav-number">3.</span> <span class="nav-text">Mac环境下 VS如何运行C#</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载库"><span class="nav-number">3.1.</span> <span class="nav-text">下载库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">3.2.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他下载"><span class="nav-number">3.3.</span> <span class="nav-text">其他下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直接下载二进制包"><span class="nav-number">3.3.1.</span> <span class="nav-text">直接下载二进制包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载mono"><span class="nav-number">3.3.2.</span> <span class="nav-text">下载mono</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">4.</span> <span class="nav-text">Hello World!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">5.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Visual-Studio-Code"><span class="nav-number">1.</span> <span class="nav-text">安装Visual Studio Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Net-和-C"><span class="nav-number">2.</span> <span class="nav-text">.Net 和 C#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac环境下-VS如何运行C"><span class="nav-number">3.</span> <span class="nav-text">Mac环境下 VS如何运行C#</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载库"><span class="nav-number">3.1.</span> <span class="nav-text">下载库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">3.2.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他下载"><span class="nav-number">3.3.</span> <span class="nav-text">其他下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直接下载二进制包"><span class="nav-number">3.3.1.</span> <span class="nav-text">直接下载二进制包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载mono"><span class="nav-number">3.3.2.</span> <span class="nav-text">下载mono</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">4.</span> <span class="nav-text">Hello World!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置VC-Code"><span class="nav-number">5.</span> <span class="nav-text">配置VC Code</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#终端控制台打印"><span class="nav-number">5.1.</span> <span class="nav-text">终端控制台打印</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">6.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>

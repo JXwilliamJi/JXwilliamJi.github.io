@@ -73,7 +73,7 @@
   <entry>
     <title><![CDATA[CSharp学习二]]></title>
     <url>%2F2018%2F09%2F21%2FCSharp%E5%AD%A6%E4%B9%A0%E4%BA%8C%2F</url>
-    <content type="text"><![CDATA[配置VC Code终端控制台打印我运行调试的时候,终端和控制台来回打开,并且输入是,终端和控制台都无法接收输入信息 点击调试按钮旁边的齿轮, 出现launch.json 找到console 修改参数为 integratedTerminal 即可]]></content>
+    <content type="text"></content>
       <categories>
         <category>C#</category>
       </categories>
@@ -84,7 +84,7 @@
   <entry>
     <title><![CDATA[CSharp学习一]]></title>
     <url>%2F2018%2F09%2F20%2FCSharp%E5%AD%A6%E4%B9%A0%E4%B8%80%2F</url>
-    <content type="text"><![CDATA[安装Visual Studio Code优点: 轻量级 官网下载最新版本 https://code.visualstudio.com/ .Net 和 C#.Net 一是指 微软提供的一整套平台, 二是指具体的.net.framework 运行库 C# 是依赖于net.framework的语言 Mac环境下 VS如何运行C#下载库dot net core 安装运行. 按照步骤一步步来即可 遇到的问题 运行下载下来的pkg文件报错,错误信息com.apple.installer.pagecontroller 错误 -1 包的签名有问题,https://www.microsoft.com/net/learn/get-started-with-dotnet-tutorial#macos Downloads 页面下载的包有问题 提示删除,非法来源 系统偏好设置.安全性与隐私.允许从以下位置下载的应用 选择任何来源 如果没有任何来源 字样 ,终端输入sudo spctl --master-disable 其他下载直接下载二进制包 下载包 https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.402-macos-x64-binaries 提取二进制文件以及依赖文件 dotnet 以及依赖host文件夹拷贝到/usr/local/bin/下,并且修改权限 chmod 777 dotnet 下载mono下载mono. mono 是.net跨平台的一套开源的微软.net全平台框架 https://www.mono-project.com/download/stable/ Hello World!重启命令行 dotnet new console -o myApp &amp; cd myApp dotnet run 参考文档在mac上使用VS Code编写C#应用程序https://www.jianshu.com/p/d8f63e1aef08 在mac上运行 mono https://blog.csdn.net/xzx_kag/article/details/78445894]]></content>
+    <content type="text"><![CDATA[安装Visual Studio Code优点: 轻量级 官网下载最新版本 https://code.visualstudio.com/ .Net 和 C#.Net 一是指 微软提供的一整套平台, 二是指具体的.net.framework 运行库 C# 是依赖于net.framework的语言 Mac环境下 VS如何运行C#下载库dot net core 安装运行. 按照步骤一步步来即可 遇到的问题 运行下载下来的pkg文件报错,错误信息com.apple.installer.pagecontroller 错误 -1 包的签名有问题,https://www.microsoft.com/net/learn/get-started-with-dotnet-tutorial#macos Downloads 页面下载的包有问题 提示删除,非法来源 系统偏好设置.安全性与隐私.允许从以下位置下载的应用 选择任何来源 如果没有任何来源 字样 ,终端输入sudo spctl --master-disable 其他下载直接下载二进制包 下载包 https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.402-macos-x64-binaries 提取二进制文件以及依赖文件 dotnet 以及依赖host文件夹拷贝到/usr/local/bin/下,并且修改权限 chmod 777 dotnet 下载mono下载mono. mono 是.net跨平台的一套开源的微软.net全平台框架 https://www.mono-project.com/download/stable/ Hello World!重启命令行 dotnet new console -o myApp &amp; cd myApp dotnet run 配置VC Code终端控制台打印我运行调试的时候,终端和控制台来回打开,并且输入是,终端和控制台都无法接收输入信息 点击调试按钮旁边的齿轮, 出现launch.json 找到console 修改参数为 integratedTerminal 即可 参考文档在mac上使用VS Code编写C#应用程序https://www.jianshu.com/p/d8f63e1aef08 在mac上运行 mono https://blog.csdn.net/xzx_kag/article/details/78445894]]></content>
       <categories>
         <category>C#</category>
       </categories>
