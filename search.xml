@@ -59,6 +59,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Xcode9 如何支持iOS 12设备调试]]></title>
+    <url>%2F2018%2F10%2F10%2FXcode9%20%20%E5%A6%82%E4%BD%95%E6%94%AF%E6%8C%81iOS%2012%E8%AE%BE%E5%A4%87%E8%B0%83%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[步骤Xcode9 不支持 iOS 12 调试是因为缺少对应的调试包 支持设备的调试包 目录为/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport 可以在Finder 中 通过shift + command + G, 键入上述地址进行快速定位 下载iOS 12 的调试包,安装到上述目录即可 资源链接: https://pan.baidu.com/s/1RBHQPQ_VWfGtOgnCRlvqFQ 提取码: rjr4 分享以后同样可以下载最新的Xcode 提取出对应的调试包,放置到旧款的Xcode即可]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>Command</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[越狱开发(一)-准备]]></title>
     <url>%2F2018%2F09%2F30%2F%E8%B6%8A%E7%8B%B1%E5%BC%80%E5%8F%91-%E4%B8%80-%E5%87%86%E5%A4%87%2F</url>
     <content type="text"><![CDATA[什么是越狱,为什么越狱越狱即获取到手机的root权限,能够自由的安装和修改App,学习底层的相关知识 越狱的分类完美越狱和不完美越狱 不完美越狱 的不完美之处在于 不能关机! 关机之后需要重新越狱 完美越狱 只要不白苹果,不需要重新越狱 越狱手机准备越狱必须要有特定的设备,越狱是通过系统或者硬件的漏洞来获取超级权限,硬件的漏洞比较严重,硬件漏洞iOS更新到几都可以完美破解,目前就iPhone 3GS 是硬件漏洞 手机哪里买? 所有的二手手机商! 以上是废话,我实在360同城帮买的 如果需要筛选出自己的想要的iPhone(比如指定版本,指定手机类型,价格低于等,需要使用以下脚本) &lt;稍后补上&gt; 12 越狱待补充 Cydia介绍待补充 插件下载待补充 系统备份(重要)待补充 禁止更新待补充 小试身手要求: 将微信的Badge 设置为0 待补充]]></content>
