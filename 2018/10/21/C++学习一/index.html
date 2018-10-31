@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="函数重载C++ 支持函数重载 源于name_mandering 技术, C++编译过程会对函数重新命名 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;void sum(double a) &amp;#123;	cout &amp;">
+<meta name="description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
 <meta name="keywords" content="C++,游戏破解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++学习一">
 <meta property="og:url" content="http://yoursite.com/2018/10/21/C++学习一/index.html">
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
-<meta property="og:description" content="函数重载C++ 支持函数重载 源于name_mandering 技术, C++编译过程会对函数重新命名 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;void sum(double a) &amp;#123;	cout &amp;">
+<meta property="og:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-21T14:38:15.426Z">
+<meta property="og:updated_time" content="2018-10-22T02:24:41.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++学习一">
-<meta name="twitter:description" content="函数重载C++ 支持函数重载 源于name_mandering 技术, C++编译过程会对函数重新命名 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;void sum(double a) &amp;#123;	cout &amp;">
+<meta name="twitter:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
 
 
 
@@ -422,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  466
+                  501
                 </span>
               
 
@@ -438,7 +438,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -460,12 +460,12 @@
 
       
         <h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><p>C++ 支持函数重载</p>
-<p>源于name_mandering 技术, C++编译过程会对函数重新命名</p>
+<p>源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰</p>
 <p>注意: 如果涉及到隐式转换,可能会报错,产生二义性!</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void sum(long a) &#123;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void sum(double a) &#123;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main () &#123;</span><br><span class="line">	</span><br><span class="line">	// 如果涉及到隐式转换报错</span><br><span class="line">	sum(10);</span><br><span class="line">	</span><br><span class="line">	// 如果要消除,必须新增一个参数是int的方法,消除隐式转换</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p>C++、C混合开发的时候,C++ 引用C 会出错,因为 上述的函数重载,</p>
-<p>C 默认的函数名为 _函数名,但是C++的函数名会发生变化,引用不到</p>
-<p>所以C++ 引用C 的时候需要使用extern</p>
+<p>C 默认的函数名为 _函数名,但是C++的函数名会发生变化,编译时映射表无法对应</p>
+<p>所以C++ 引用C 的时候需要使用extern,告诉编译器 某些地方使用C编译</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// sum.h</span><br><span class="line"></span><br><span class="line">#ifndef _SUM_H</span><br><span class="line">#define _SUM_H</span><br><span class="line"></span><br><span class="line">#if __cplusplus</span><br><span class="line">extern &quot;C&quot; &#123;</span><br><span class="line">#endif</span><br><span class="line">	</span><br><span class="line">	int sum(int a, int b);</span><br><span class="line"></span><br><span class="line">#if __cplusplus</span><br><span class="line">&#125;</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// sum.c</span><br><span class="line"></span><br><span class="line">#include &quot;sum.h&quot;</span><br><span class="line"></span><br><span class="line">int sum(int a, int b) &#123;</span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意: extern 可以修饰函数 <code>extern &quot;C&quot; func () {}</code> , 当函数申明和实现分离时,必须写在申明中,写在实现中会报错</p>
@@ -499,7 +499,7 @@
   <p><span>本文标题:</span><a href="/2018/10/21/C++学习一/">C++学习一</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年10月21日 - 22:10</p>
-  <p><span>最后更新:</span>2018年10月21日 - 22:10</p>
+  <p><span>最后更新:</span>2018年10月22日 - 10:10</p>
   <p><span>原始链接:</span><a href="/2018/10/21/C++学习一/" title="C++学习一">http://yoursite.com/2018/10/21/C++学习一/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/10/21/C++学习一/"  aria-label="复制成功！"></i></span>
   </p>
@@ -576,8 +576,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/15/iOS常见访问地址/" rel="next" title="iOS常见访问地址">
-                <i class="fa fa-chevron-left"></i> iOS常见访问地址
+              <a href="/2018/10/15/Unity 学习(二)/" rel="next" title="Unity 学习(二)">
+                <i class="fa fa-chevron-left"></i> Unity 学习(二)
               </a>
             
           </div>
@@ -585,6 +585,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/28/Unity 2D Roguelike/" rel="prev" title="Unity 2D Roguelike">
+                Unity 2D Roguelike <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -674,7 +678,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -870,7 +874,7 @@
 
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
-    <span class="post-count">Total Words:12.1k</span>
+    <span class="post-count">Total Words:13.7k</span>
   </div>
 
 
