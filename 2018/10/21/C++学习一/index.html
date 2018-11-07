@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
 <meta property="og:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-22T02:24:41.095Z">
+<meta property="og:updated_time" content="2018-11-07T08:26:30.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++学习一">
 <meta name="twitter:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
@@ -469,8 +469,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// sum.h</span><br><span class="line"></span><br><span class="line">#ifndef _SUM_H</span><br><span class="line">#define _SUM_H</span><br><span class="line"></span><br><span class="line">#if __cplusplus</span><br><span class="line">extern &quot;C&quot; &#123;</span><br><span class="line">#endif</span><br><span class="line">	</span><br><span class="line">	int sum(int a, int b);</span><br><span class="line"></span><br><span class="line">#if __cplusplus</span><br><span class="line">&#125;</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// sum.c</span><br><span class="line"></span><br><span class="line">#include &quot;sum.h&quot;</span><br><span class="line"></span><br><span class="line">int sum(int a, int b) &#123;</span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意: extern 可以修饰函数 <code>extern &quot;C&quot; func () {}</code> , 当函数申明和实现分离时,必须写在申明中,写在实现中会报错</p>
-<p>###. 默认参数</p>
-<p>函数可以带默认参数,但是默认参数的顺序是从右向左, </p>
+<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>函数可以带默认参数,但是默认参数的顺序是从右向左, </p>
 <p>简单来说,左边的形参没有默认参数,右边就不能有; 左边的形参有了默认参数,左边第二个才可以设置默认参数</p>
 <p>注意: 默认参数与函数的重载一起使用时,可能导致二义性</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void func (int a , int b = 12) &#123;&#125;</span><br><span class="line"></span><br><span class="line">void fund (int a) &#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 调用下面的没问题</span><br><span class="line"></span><br><span class="line">func(10,20);</span><br><span class="line"></span><br><span class="line">// 调用下面的报错,二义性</span><br><span class="line"></span><br><span class="line">func(10);</span><br></pre></td></tr></table></figure>
@@ -499,7 +498,7 @@
   <p><span>本文标题:</span><a href="/2018/10/21/C++学习一/">C++学习一</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年10月21日 - 22:10</p>
-  <p><span>最后更新:</span>2018年10月22日 - 10:10</p>
+  <p><span>最后更新:</span>2018年11月07日 - 16:11</p>
   <p><span>原始链接:</span><a href="/2018/10/21/C++学习一/" title="C++学习一">http://yoursite.com/2018/10/21/C++学习一/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/10/21/C++学习一/"  aria-label="复制成功！"></i></span>
   </p>
@@ -828,7 +827,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数重载"><span class="nav-number">1.</span> <span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extern"><span class="nav-number">2.</span> <span class="nav-text">extern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数指针"><span class="nav-number">3.</span> <span class="nav-text">函数指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实参和形参"><span class="nav-number">4.</span> <span class="nav-text">实参和形参</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数重载"><span class="nav-number">1.</span> <span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extern"><span class="nav-number">2.</span> <span class="nav-text">extern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认参数"><span class="nav-number">3.</span> <span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数指针"><span class="nav-number">4.</span> <span class="nav-text">函数指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实参和形参"><span class="nav-number">5.</span> <span class="nav-text">实参和形参</span></a></li></ol></div>
             
 
           </div>
@@ -874,7 +873,7 @@
 
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
-    <span class="post-count">Total Words:13.7k</span>
+    <span class="post-count">Total Words:14.3k</span>
   </div>
 
 
