@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
 <meta property="og:description" content="如何本地存储图片我们写博客有时候需要很多图片,如果有可能可以选择网络图片,但是免费的网络图片随时可能失效(1年之后可能就失效了,文章就废了),自己的对象存储是按照流量收费,并且是后付费的(如果找到免费的,推荐) 我们选择本地存储图片试试! 在hexo目录下运行 npm install hexo-asset-image --save 下载依赖 修改站点配置文件_config.yml 修改如下 12#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T09:18:43.845Z">
+<meta property="og:updated_time" content="2018-11-08T07:38:06.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 开始写笔记">
 <meta name="twitter:description" content="如何本地存储图片我们写博客有时候需要很多图片,如果有可能可以选择网络图片,但是免费的网络图片随时可能失效(1年之后可能就失效了,文章就废了),自己的对象存储是按照流量收费,并且是后付费的(如果找到免费的,推荐) 我们选择本地存储图片试试! 在hexo目录下运行 npm install hexo-asset-image --save 下载依赖 修改站点配置文件_config.yml 修改如下 12#">
@@ -163,7 +163,10 @@
 
 
 
-</head>
+<link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="/assets/js/Meting.min.js" class="meting-script-marker"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -422,7 +425,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  654
+                  1.2k
                 </span>
               
 
@@ -438,7 +441,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  5
                 </span>
               
             </div>
@@ -481,17 +484,43 @@
 </ul>
 <h2 id="如何添加音乐和视频"><a href="#如何添加音乐和视频" class="headerlink" title="如何添加音乐和视频"></a>如何添加音乐和视频</h2><p>这里分为两种,一种是没有背景音乐,但是某些文章配置音乐(推荐!)</p>
 <p>还有一种是设置背景音乐,一打开博客就是音乐很吵哎,不推荐!</p>
-<h3 id="添加背景音乐"><a href="#添加背景音乐" class="headerlink" title="添加背景音乐"></a>添加背景音乐</h3><p><a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-aplayer</a></p>
-<h3 id="给某些文章添加背景音乐"><a href="#给某些文章添加背景音乐" class="headerlink" title="给某些文章添加背景音乐"></a>给某些文章添加背景音乐</h3><p>直接在文章中添加下列代码, 到网易云音乐中找到喜欢的音乐,生成外链</p>
-<ul>
-<li>如果 width 或者 height 设置为0,音乐播放,但是视图会隐藏</li>
-<li>auto 1为自动播放,0不自动</li>
-<li></li>
-</ul>
+<h3 id="添加背景音乐"><a href="#添加背景音乐" class="headerlink" title="添加背景音乐"></a>添加背景音乐</h3><p>直接在文章中添加下列代码, 到网易云音乐中找到喜欢的音乐,生成外链</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=298 height=52 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=32192436&amp;auto=1&amp;height=32&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-aplayer</a></p>
-<h3 id="给文章添加视频"><a href="#给文章添加视频" class="headerlink" title="给文章添加视频"></a>给文章添加视频</h3><p><a href="https://github.com/MoePlayer/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-dplayer</a></p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a></p>
+<p>到Next 主题目录 下的 layout 找到需要添加音乐的部分添加以上代码</p>
+<p>比如要在侧边栏添加,修改 layout/_macro/sidebar.swig 文件,在适当的位置添加代码</p>
+<p>注意: </p>
+<p>width 或者 height 设置为0可以隐藏音乐的展示层,但是音乐依然播放.</p>
+<h3 id="给某些文章添加背景音乐"><a href="#给某些文章添加背景音乐" class="headerlink" title="给某些文章添加背景音乐"></a>给某些文章添加背景音乐</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p><code>npm install --save hexo-tag-aplayer</code></p>
+<h4 id="修改hexo-配置文件-添加下列代码"><a href="#修改hexo-配置文件-添加下列代码" class="headerlink" title="修改hexo 配置文件,添加下列代码"></a>修改hexo 配置文件,添加下列代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
+<h4 id="获取音乐"><a href="#获取音乐" class="headerlink" title="获取音乐"></a>获取音乐</h4><p>meting 的简单书写格式为 <code>
+    <div id="aplayer-NUFHmllK" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="id" data-server="server" data-type="type" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div></code></p>
+<p>例如 <code>
+    <div id="aplayer-lOzDDZtk" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="60198" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div></code></p>
+<p>server支持的音乐平台有: netease, tencent, kugou, xiami, baidu,注意修改参数</p>
+<p>歌曲的 id 和 type 必须对应,如果 id 是列表的 id, 那么 type 写上 <code>playlist</code> ,如果 id 是单曲, type 就是 <code>song</code></p>
+<p>打开<a href="https://y.qq.com/" target="_blank" rel="noopener">QQ 音乐</a>,找到喜欢的歌单,找到分享,选择复制链接<code>https://y.qq.com/n/m/detail/taoge/index.html?id=5311096383</code>,里面会有 id <code>5311096383</code>, 替换到meting 中的 id,平台选择<code>tencent</code> , type 是 <code>playlist</code></p>
+<h4 id="修改文章的-markdown"><a href="#修改文章的-markdown" class="headerlink" title="修改文章的 markdown"></a>修改文章的 markdown</h4><p>添加下列代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;5311096383&quot; &quot;netease&quot; &quot;playlist&quot; &quot;mini&quot; &quot;listfolded&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<p>说明 <code>mini</code> 是开启迷你模式, <code>listfolded</code> 是折叠列表</p>
+<h4 id="只想添加本地音乐怎么办"><a href="#只想添加本地音乐怎么办" class="headerlink" title="只想添加本地音乐怎么办"></a>只想添加本地音乐怎么办</h4><p>使用标准的模式:</p>
+<p><code>
+			<script>
+				console.error("Error: [hexo-tag-aplayer] Specified asset file not found ([picture_url,)");
+			</script></code></p>
+<p>需要配合Hexo 的 <code>文章资源文件夹</code> 功能时,资源如 <code>caffeine.mp3</code> <code>picture.jpg</code> ,<code>caffeine.txt</code> 放到文章的同名目录内</p>
+<p>在需要的文章中添加 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% aplayer &quot;Caffeine&quot; &quot;Jeff Williams&quot; &quot;caffeine.mp3&quot; &quot;picture.jpg&quot; &quot;lrc:caffeine.txt&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="给文章添加视频"><a href="#给文章添加视频" class="headerlink" title="给文章添加视频"></a>给文章添加视频</h3><h4 id="安装插件-1"><a href="#安装插件-1" class="headerlink" title="安装插件"></a>安装插件</h4><p><code>npm install hexo-tag-dplayer --save</code></p>
+<h4 id="找到视频"><a href="#找到视频" class="headerlink" title="找到视频"></a>找到视频</h4><p>这里只能是 <code>http://xxxx/xxx/xx.mp4</code></p>
+<h4 id="书写格式"><a href="#书写格式" class="headerlink" title="书写格式"></a>书写格式</h4><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><p>no url specified, no dplayer _(:3」∠)_</p>
+<p>举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dplayer &quot;url=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4&quot; &quot;addition=https://dplayer.daoapp.io/bilibili?aid=4157142&quot; &quot;api=https://api.prprpr.me/dplayer/&quot; &quot;pic=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg&quot; &quot;id=9E2E3368B56CDBB4&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;token=tokendemo&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="优酷-腾讯的视频如何引入"><a href="#优酷-腾讯的视频如何引入" class="headerlink" title="优酷,腾讯的视频如何引入"></a>优酷,腾讯的视频如何引入</h4><p>搜索视频,分享,找到关于 <code>iframe</code> 的代码,复制代码,拷贝到文章中,但是貌似不能放在最后</p>
+<p>可以加上长宽</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;0&quot; src=&quot;https://v.qq.com/txp/iframe/player.html?vid=p0758s8f29d&quot; width=&quot;600&quot; height=&quot;500&quot; allowFullScreen=&quot;true&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-aplayer</a></p>
+<p><a href="https://github.com/MoePlayer/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-dplayer</a></p>
+<p><a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a></p>
 <p><a href="http://blog.fiftykg.com/hexo/hexo%E9%A6%96%E9%A1%B5%E9%9A%90%E8%97%8F%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0.html" target="_blank" rel="noopener">http://blog.fiftykg.com/hexo/hexo%E9%A6%96%E9%A1%B5%E9%9A%90%E8%97%8F%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0.html</a></p>
 
       
@@ -513,7 +542,7 @@
   <p><span>本文标题:</span><a href="/2018/09/20/Hexo-开始写笔记/">Hexo 开始写笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年09月20日 - 09:09</p>
-  <p><span>最后更新:</span>2018年11月07日 - 17:11</p>
+  <p><span>最后更新:</span>2018年11月08日 - 15:11</p>
   <p><span>原始链接:</span><a href="/2018/09/20/Hexo-开始写笔记/" title="Hexo 开始写笔记">http://yoursite.com/2018/09/20/Hexo-开始写笔记/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/09/20/Hexo-开始写笔记/"  aria-label="复制成功！"></i></span>
   </p>
@@ -690,7 +719,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -701,7 +730,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -712,7 +741,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -840,7 +869,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何本地存储图片"><span class="nav-number">1.</span> <span class="nav-text">如何本地存储图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页隐藏一些文章"><span class="nav-number">2.</span> <span class="nav-text">首页隐藏一些文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何添加音乐和视频"><span class="nav-number">3.</span> <span class="nav-text">如何添加音乐和视频</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">3.1.</span> <span class="nav-text">添加背景音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给某些文章添加背景音乐"><span class="nav-number">3.2.</span> <span class="nav-text">给某些文章添加背景音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加视频"><span class="nav-number">3.3.</span> <span class="nav-text">给文章添加视频</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">4.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何本地存储图片"><span class="nav-number">1.</span> <span class="nav-text">如何本地存储图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页隐藏一些文章"><span class="nav-number">2.</span> <span class="nav-text">首页隐藏一些文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何添加音乐和视频"><span class="nav-number">3.</span> <span class="nav-text">如何添加音乐和视频</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">3.1.</span> <span class="nav-text">添加背景音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给某些文章添加背景音乐"><span class="nav-number">3.2.</span> <span class="nav-text">给某些文章添加背景音乐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装插件"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改hexo-配置文件-添加下列代码"><span class="nav-number">3.2.2.</span> <span class="nav-text">修改hexo 配置文件,添加下列代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取音乐"><span class="nav-number">3.2.3.</span> <span class="nav-text">获取音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改文章的-markdown"><span class="nav-number">3.2.4.</span> <span class="nav-text">修改文章的 markdown</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#只想添加本地音乐怎么办"><span class="nav-number">3.2.5.</span> <span class="nav-text">只想添加本地音乐怎么办</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加视频"><span class="nav-number">3.3.</span> <span class="nav-text">给文章添加视频</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装插件-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#找到视频"><span class="nav-number">3.3.2.</span> <span class="nav-text">找到视频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#书写格式"><span class="nav-number">3.3.3.</span> <span class="nav-text">书写格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优酷-腾讯的视频如何引入"><span class="nav-number">3.3.4.</span> <span class="nav-text">优酷,腾讯的视频如何引入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">4.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>
@@ -886,7 +915,7 @@
 
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
-    <span class="post-count">Total Words:14.3k</span>
+    <span class="post-count">Total Words:14.9k</span>
   </div>
 
 
