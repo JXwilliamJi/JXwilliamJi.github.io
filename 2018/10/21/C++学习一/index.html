@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
 <meta property="og:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-08T07:26:54.542Z">
+<meta property="og:updated_time" content="2018-11-11T13:20:29.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++学习一">
 <meta name="twitter:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
@@ -163,7 +163,7 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -475,16 +475,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void func (int a , int b = 12) &#123;&#125;</span><br><span class="line"></span><br><span class="line">void fund (int a) &#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 调用下面的没问题</span><br><span class="line"></span><br><span class="line">func(10,20);</span><br><span class="line"></span><br><span class="line">// 调用下面的报错,二义性</span><br><span class="line"></span><br><span class="line">func(10);</span><br></pre></td></tr></table></figure>
 <h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void func (int a, int b) &#123;&#125;</span><br><span class="line"></span><br><span class="line">void (*name)(int, int) = func</span><br></pre></td></tr></table></figure>
 <p>OC Block的实现就是函数指针</p>
-<h3 id="实参和形参"><a href="#实参和形参" class="headerlink" title="实参和形参"></a>实参和形参</h3><iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=g0767oveihy" allowfullscreen="true"></iframe>
-
-
-<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=p0758s8f29d" width="480" height="400" allowfullscreen="true"></iframe>
-
-<p>总结: </p>
+<h3 id="实参和形参"><a href="#实参和形参" class="headerlink" title="实参和形参"></a>实参和形参</h3><p>总结: </p>
 <p>定义时 占位的参数 就是形参</p>
 <p>调用时 实际赋值的参数  就是实参</p>
-<!--<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><p>no url specified, no dplayer _(:3」∠)_</p>–&gt;
--->
+
       
     </div>
     
@@ -504,7 +498,7 @@
   <p><span>本文标题:</span><a href="/2018/10/21/C++学习一/">C++学习一</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年10月21日 - 22:10</p>
-  <p><span>最后更新:</span>2018年11月08日 - 15:11</p>
+  <p><span>最后更新:</span>2018年11月11日 - 21:11</p>
   <p><span>原始链接:</span><a href="/2018/10/21/C++学习一/" title="C++学习一">http://yoursite.com/2018/10/21/C++学习一/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/10/21/C++学习一/"  aria-label="复制成功！"></i></span>
   </p>
@@ -581,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/15/iOS常见访问地址/" rel="next" title="iOS常见访问地址">
-                <i class="fa fa-chevron-left"></i> iOS常见访问地址
+              <a href="/2018/10/15/Unity 学习(二)/" rel="next" title="Unity 学习(二)">
+                <i class="fa fa-chevron-left"></i> Unity 学习(二)
               </a>
             
           </div>
