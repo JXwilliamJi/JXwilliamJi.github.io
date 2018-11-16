@@ -109,8 +109,9 @@
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/layout_set.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/MainPlay.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/CreatePlay.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/CreatePlay3.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/CreatePlay4.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/tiaozheng.png">
-<meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/CreatePlay2.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/AnimaionSpeed.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/AnimaitonVC.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/TransitionAnimator.png">
@@ -122,7 +123,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/createPrefabsName.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/createOutWall.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(一)/CameraCenter.png">
-<meta property="og:updated_time" content="2018-11-14T06:57:48.861Z">
+<meta property="og:updated_time" content="2018-11-14T08:49:51.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity 2D Roguelike(一)">
 <meta name="twitter:description" content="2D 游戏制作学习Unity的官方教程 2D Roguelike tutorial 开发 游戏介绍这是官方提供的游戏,名字叫拾荒漫游者,我们从这个游戏大致可以了解下Unity的开发流程 需求游戏名称为: 拾荒者 大致介绍: 游戏有外围栏,障碍,敌人,食物,玩家和出口几个元素组成, 障碍和食物都是随机生成,玩家在左下角,出口在右上角 成功条件: 当玩家到达出口时,进入下一关卡 失败条件: 当玩家的食">
@@ -441,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.2k
+                  3.3k
                 </span>
               
 
@@ -457,7 +458,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  13
                 </span>
               
             </div>
@@ -494,7 +495,7 @@
 <p>选择下载好的资源包,导入</p>
 <h3 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h3><p><img src="/2018/10/28/Unity 2D Roguelike(一)/Assets.png" alt=""></p>
 <h3 id="选择布局方式"><a href="#选择布局方式" class="headerlink" title="选择布局方式"></a>选择布局方式</h3><p><img src="/2018/10/28/Unity 2D Roguelike(一)/layout_set.png" alt=""></p>
-<h3 id="文件创建"><a href="#文件创建" class="headerlink" title="文件创建"></a>文件创建</h3><p>在Assets 文件下一次创建</p>
+<h3 id="文件创建"><a href="#文件创建" class="headerlink" title="文件创建"></a>文件创建</h3><p>在Assets 文件下创建下列文件夹,用于归类: </p>
 <ul>
 <li>Scenes  存储场景,场景就是同一个背景的游戏部分 </li>
 <li>Scripts 游戏脚本存储</li>
@@ -502,21 +503,21 @@
 <li>Animations 存放游戏动画和动画控制器</li>
 <li>还有资源类文件,比如Audios,Vedios,Fonts等</li>
 </ul>
-<h2 id="资源准备阶段"><a href="#资源准备阶段" class="headerlink" title="资源准备阶段"></a>资源准备阶段</h2><h3 id="首先查看资源"><a href="#首先查看资源" class="headerlink" title="首先查看资源"></a>首先查看资源</h3><p>在Assets/Sprites,选择<code>Scavengers_SpriteSheet</code>, 在右侧 <code>inspector</code> 中 可以点击Sprite Editor查看精灵</p>
+<h2 id="资源准备阶段"><a href="#资源准备阶段" class="headerlink" title="资源准备阶段"></a>资源准备阶段</h2><p>开始阶段,我们<code>cmd+s</code> 保存场景,就是将<code>Hierachy</code>里的游戏物体保存下来,保存到<code>_main</code>,放置到Scenes.</p>
+<h3 id="首先查看资源"><a href="#首先查看资源" class="headerlink" title="首先查看资源"></a>首先查看资源</h3><p>在Assets/Sprites,选择<code>Scavengers_SpriteSheet</code>, 在右侧 <code>inspector</code> 中 可以点击Sprite Editor查看精灵</p>
 <h3 id="游戏基本的画面-需要搭建如下"><a href="#游戏基本的画面-需要搭建如下" class="headerlink" title="游戏基本的画面,需要搭建如下"></a>游戏基本的画面,需要搭建如下</h3><p><img src="/2018/10/28/Unity 2D Roguelike(一)/MainPlay.png" alt=""></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>游戏画面是一个10 x 10 的格子,周边是一周墙,内部的6 x 6才会随机生成怪物和围墙以及食物,玩家出现在左下角,出口在右上角</p>
-<h3 id="创建玩家和敌人的游戏物体"><a href="#创建玩家和敌人的游戏物体" class="headerlink" title="创建玩家和敌人的游戏物体"></a>创建玩家和敌人的游戏物体</h3><blockquote>
-<p>预制体相当于抽象父类,就是 预先制作好的游戏物体, 可以用它来copy 出同样的物体</p>
-</blockquote>
-<p>在 <code>Project -&gt;  Assets -&gt; Scavengers_SpriteSheet</code> ,点开类似播放的按钮</p>
-<p>按住Shift, 从 第一张选择到第六张, 拖动到 <code>Hierarchy</code> 下, 取名为Player,创建了玩家这个游戏物体</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>游戏画面是一个8 x 8 的格子,周边是一周墙,内部的4 x 4才会随机生成怪物和围墙以及食物,玩家出现在左下角,出口在右上角</p>
+<h3 id="创建玩家和敌人的游戏物体"><a href="#创建玩家和敌人的游戏物体" class="headerlink" title="创建玩家和敌人的游戏物体"></a>创建玩家和敌人的游戏物体</h3><p>在 <code>Project -&gt;  Assets -&gt; Scavengers_SpriteSheet</code> ,点开类似播放的按钮</p>
+<p>按住Shift, 从 第一张选择到第六张, 拖动到 <code>Hierarchy</code> 下</p>
 <p><img src="/2018/10/28/Unity 2D Roguelike(一)/CreatePlay.png" alt=""></p>
+<p>出现以下界面,选择动画的名称</p>
+<p><img src="/2018/10/28/Unity 2D Roguelike(一)/CreatePlay3.png" alt=""></p>
+<p><img src="/2018/10/28/Unity 2D Roguelike(一)/CreatePlay4.png" alt=""></p>
+<p>游戏物体取名为<code>Player</code>,动画取名为<code>PlayerIdle</code>(Idle动画-&gt; 等待时的动画), 动画控制器取名为<code>PlayerController</code></p>
 <p>按一下 <code>w</code> 快捷键,或者选取右上角的拖动标识,拖动角色</p>
 <p><img src="/2018/10/28/Unity 2D Roguelike(一)/tiaozheng.png" alt=""></p>
 <p>然后点击Game 查看效果</p>
-<p>同时生成的还有2个动画文件 </p>
-<p><img src="/2018/10/28/Unity 2D Roguelike(一)/CreatePlay2.png" alt=""></p>
-<p>将Player动画和控制器拖拽到Animation文件下,分别创建Aimation和AnimationController放置2个文件</p>
+<p>在Animation文件下,分别创建Aimation和AnimationController文件夹,分别放置 Player动画<code>PlayerIdle</code>和控制器<code>PlayerController</code></p>
 <h4 id="同样创建2个敌人的游戏物体"><a href="#同样创建2个敌人的游戏物体" class="headerlink" title="同样创建2个敌人的游戏物体"></a>同样创建2个敌人的游戏物体</h4><p>按照以上方法练习一遍,选择资源文件第6-11张 第一个敌人  12-17张第二个敌人</p>
 <h4 id="修改动画"><a href="#修改动画" class="headerlink" title="修改动画"></a>修改动画</h4><p>点击运行,发现动画太快了,我们点击动画,选择橘黄色的部分,可以设置speed,设置为 0.5,重新运行,会发现慢了很多,名字修改为PlayerIdle</p>
 <p><img src="/2018/10/28/Unity 2D Roguelike(一)/AnimaionSpeed.png" alt=""></p>
@@ -541,7 +542,10 @@
 <p>创建 从攻击状态返回普通状态的动画,我们让攻击动画播放完就回到普通状态.</p>
 <p><img src="/2018/10/28/Unity 2D Roguelike(一)/AnimatorBack.png" alt=""></p>
 <p>敌人和玩家也都创建好动画转换,完成后玩家和敌人的游戏资源就处理好了!</p>
-<h4 id="创建预制体"><a href="#创建预制体" class="headerlink" title="创建预制体"></a>创建预制体</h4><p>将<code>Hierachy</code> 中的Player,Enemy1,Enemy2 拖动到Project 文件的Prefabs 文件下,生成预制体,顺便将<code>Hierachy</code> 中的变为蓝色字体的游戏物体删除,因为我们通过代码创建游戏物体.</p>
+<h4 id="创建预制体"><a href="#创建预制体" class="headerlink" title="创建预制体"></a>创建预制体</h4><blockquote>
+<p>预制体相当于抽象父类,就是 预先制作好的游戏物体, 可以用它来copy 出同样的物体</p>
+</blockquote>
+<p>将<code>Hierachy</code> 中的Player,Enemy1,Enemy2 拖动到Project 文件的Prefabs 文件下,生成预制体,顺便将<code>Hierachy</code> 中的变为蓝色字体的游戏物体删除,因为我们通过代码创建游戏物体.</p>
 <p><img src="/2018/10/28/Unity 2D Roguelike(一)/Prefabs.png" alt=""></p>
 <h3 id="创建地板-食物-以及障碍物的预制体"><a href="#创建地板-食物-以及障碍物的预制体" class="headerlink" title="创建地板,食物,以及障碍物的预制体"></a>创建地板,食物,以及障碍物的预制体</h3><h4 id="首先创建8种地板的预制体"><a href="#首先创建8种地板的预制体" class="headerlink" title="首先创建8种地板的预制体"></a>首先创建8种地板的预制体</h4><p>选择图片32-39,分别创建Floor1- Floor8的预制体</p>
 <h4 id="创建食物苏打汽水-出口的预制体"><a href="#创建食物苏打汽水-出口的预制体" class="headerlink" title="创建食物苏打汽水,出口的预制体"></a>创建食物苏打汽水,出口的预制体</h4><p>选择图片资源第18张创建苏打汽水,19张创建食物,20张创建出口</p>
@@ -615,7 +619,7 @@
 <h4 id="创建出口"><a href="#创建出口" class="headerlink" title="创建出口"></a>创建出口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vector3 randomPos() &#123;</span><br><span class="line">	int randomNum = Random.Range (0,positionList.Count);</span><br><span class="line">	Vector3 vec = positionList[randomNum];</span><br><span class="line">	positionList.Remove (vec);</span><br><span class="line">	return vec;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="完善逻辑"><a href="#完善逻辑" class="headerlink" title="完善逻辑"></a>完善逻辑</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void createMap () &#123;</span><br><span class="line">	// 创建外墙和地板</span><br><span class="line">	createWallsAndFloors();</span><br><span class="line">	// 创建内墙,食物</span><br><span class="line">	createInner ();</span><br><span class="line">	// 创建出口</span><br><span class="line">	createExit ();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行游戏,查看效果</p>
-<h3 id="地图基本创建完毕"><a href="#地图基本创建完毕" class="headerlink" title="地图基本创建完毕!!!"></a>地图基本创建完毕!!!</h3><p>其他信息请参看 <a href="https://blog.williamlovealisa.cn/2018/10/28/Unity2D%20Roguelike(%E4%BA%8C" target="_blank" rel="noopener">Unity 2D Rouguelike(二)</a>/)</p>
+<h3 id="地图基本创建完毕"><a href="#地图基本创建完毕" class="headerlink" title="地图基本创建完毕!!!"></a>地图基本创建完毕!!!</h3><p>其他信息请参看 <a href="https://blog.williamlovealisa.cn/2018/10/28/Unity2D%20Roguelike(%E4%BA%8C" target="_blank" rel="noopener">Unity 2D Rouguelike(二)</a>)</p>
 
       
     </div>
@@ -636,7 +640,7 @@
   <p><span>本文标题:</span><a href="/2018/10/28/Unity 2D Roguelike(一)/">Unity 2D Roguelike(一)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年10月28日 - 09:10</p>
-  <p><span>最后更新:</span>2018年11月14日 - 14:11</p>
+  <p><span>最后更新:</span>2018年11月14日 - 16:11</p>
   <p><span>原始链接:</span><a href="/2018/10/28/Unity 2D Roguelike(一)/" title="Unity 2D Roguelike(一)">http://yoursite.com/2018/10/28/Unity 2D Roguelike(一)/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/10/28/Unity 2D Roguelike(一)/"  aria-label="复制成功！"></i></span>
   </p>
@@ -813,7 +817,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1009,7 +1013,7 @@
 
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
-    <span class="post-count">Total Words:18.1k</span>
+    <span class="post-count">Total Words:18.3k</span>
   </div>
 
 
