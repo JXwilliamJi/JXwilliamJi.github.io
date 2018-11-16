@@ -12,17 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Unity 破解版下载]]></title>
-    <url>%2F2018%2F10%2F28%2FUnity%20%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD%2F</url>
-    <content type="text"><![CDATA[声明本文仅供技术交流,没有任何商业目的. 针对人群mac 环境下的Unity 开发人员 破解版步骤首先下载Unity 官方版本目前试验支持的版本到2018.2.15f1https://unity3d.com/cn/get-unity/download/archive 按照步骤一直下一步安装成功即可,先不要打开 下载破解软件链接:https://pan.baidu.com/s/1_IKsotfeoSQhxMUMy7LGVA密码:787v 下载后打开,如图所示 到应用程序 里面找到Unity, 拖动到上面针筒的位置,然后点击+号. 然后，点击破解工具的工具栏：Tools-&gt;Copy Unity License files。破解完成。]]></content>
-      <categories>
-        <category>Unity</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Unity 2D Roguelike(二)]]></title>
     <url>%2F2018%2F10%2F28%2FUnity2D%20Roguelike(%E4%BA%8C)%2F</url>
     <content type="text"><![CDATA[基本地图的完善创建敌人创建玩家控制游戏玩家的移动12// 获取W的按键Input.GetKey (KeyCode.W); 创建UI场景切换其他添加背景音乐在GameManager 上添加AudioSource组件,添加音乐 手机控制器]]></content>
@@ -124,6 +113,18 @@
       </categories>
       <tags>
         <tag>C#</tag>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Unity 破解版下载]]></title>
+    <url>%2F2018%2F10%2F10%2FUnity%20%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[声明本文仅供技术交流,没有任何商业目的. 针对人群mac 环境下的Unity 开发人员 破解版步骤首先下载Unity 官方版本目前试验支持的版本到2018.2.15f1https://unity3d.com/cn/get-unity/download/archive 按照步骤一直下一步安装成功即可,先不要打开 下载破解软件链接:https://pan.baidu.com/s/1_IKsotfeoSQhxMUMy7LGVA密码:787v 下载后打开,如图所示 到应用程序 里面找到Unity, 拖动到上面针筒的位置,然后点击+号. 然后，点击破解工具的工具栏：Tools-&gt;Copy Unity License files。破解完成。]]></content>
+      <categories>
+        <category>Unity</category>
+        <category>Unity破解</category>
+      </categories>
+      <tags>
         <tag>Unity</tag>
       </tags>
   </entry>
