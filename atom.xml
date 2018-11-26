@@ -5,9 +5,9 @@
   <subtitle>Coder can change world!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://blog.williamlovealisa.cn/"/>
   <updated>2018-11-08T07:37:39.712Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://blog.williamlovealisa.cn/</id>
   
   <author>
     <name>William Ji</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title> 荒野大镖客视频</title>
-    <link href="http://yoursite.com/2018/11/08/%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A2%E8%A7%86%E9%A2%91/"/>
-    <id>http://yoursite.com/2018/11/08/荒野大镖客视频/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/11/08/%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A2%E8%A7%86%E9%A2%91/"/>
+    <id>https://blog.williamlovealisa.cn/2018/11/08/荒野大镖客视频/</id>
     <published>2018-11-08T07:28:15.000Z</published>
     <updated>2018-11-08T07:37:39.712Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="游戏视频" scheme="http://yoursite.com/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/"/>
+      <category term="游戏视频" scheme="https://blog.williamlovealisa.cn/categories/%E6%B8%B8%E6%88%8F%E8%A7%86%E9%A2%91/"/>
     
     
-      <category term="Game" scheme="http://yoursite.com/tags/Game/"/>
+      <category term="Game" scheme="https://blog.williamlovealisa.cn/tags/Game/"/>
     
   </entry>
   
   <entry>
     <title>Unity 2D Roguelike(二)</title>
-    <link href="http://yoursite.com/2018/10/28/Unity2D%20Roguelike(%E4%BA%8C)/"/>
-    <id>http://yoursite.com/2018/10/28/Unity2D Roguelike(二)/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/28/Unity2D%20Roguelike(%E4%BA%8C)/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/28/Unity2D Roguelike(二)/</id>
     <published>2018-10-28T02:59:49.000Z</published>
     <updated>2018-11-14T06:50:29.894Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/categories/Unity/"/>
     
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
     
   </entry>
   
   <entry>
     <title>Unity 2D Roguelike(一)</title>
-    <link href="http://yoursite.com/2018/10/28/Unity%202D%20Roguelike(%E4%B8%80)/"/>
-    <id>http://yoursite.com/2018/10/28/Unity 2D Roguelike(一)/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/28/Unity%202D%20Roguelike(%E4%B8%80)/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/28/Unity 2D Roguelike(一)/</id>
     <published>2018-10-28T01:57:48.000Z</published>
     <updated>2018-11-14T08:49:51.938Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/categories/Unity/"/>
     
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
     
   </entry>
   
   <entry>
     <title>C++学习一</title>
-    <link href="http://yoursite.com/2018/10/21/C++%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://yoursite.com/2018/10/21/C++学习一/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/21/C++%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/21/C++学习一/</id>
     <published>2018-10-21T14:11:43.000Z</published>
     <updated>2018-11-11T13:20:29.373Z</updated>
     
@@ -109,19 +109,19 @@
     
     </summary>
     
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+      <category term="C++" scheme="https://blog.williamlovealisa.cn/categories/C/"/>
     
     
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C++" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
-      <category term="游戏破解" scheme="http://yoursite.com/tags/%E6%B8%B8%E6%88%8F%E7%A0%B4%E8%A7%A3/"/>
+      <category term="游戏破解" scheme="https://blog.williamlovealisa.cn/tags/%E6%B8%B8%E6%88%8F%E7%A0%B4%E8%A7%A3/"/>
     
   </entry>
   
   <entry>
     <title>Visual Studio Code 使用指南</title>
-    <link href="http://yoursite.com/2018/10/16/Visual%20Studio%20Code%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2018/10/16/Visual Studio Code 使用指南/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/16/Visual%20Studio%20Code%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/16/Visual Studio Code 使用指南/</id>
     <published>2018-10-16T08:09:39.000Z</published>
     <updated>2018-11-13T02:12:18.990Z</updated>
     
@@ -136,23 +136,23 @@
     
     </summary>
     
-      <category term="工具使用" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+      <category term="工具使用" scheme="https://blog.williamlovealisa.cn/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
     
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C++" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
     
-      <category term="VSCode" scheme="http://yoursite.com/tags/VSCode/"/>
+      <category term="VSCode" scheme="https://blog.williamlovealisa.cn/tags/VSCode/"/>
     
   </entry>
   
   <entry>
     <title>iOS常见访问地址</title>
-    <link href="http://yoursite.com/2018/10/15/iOS%E5%B8%B8%E8%A7%81%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/"/>
-    <id>http://yoursite.com/2018/10/15/iOS常见访问地址/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/15/iOS%E5%B8%B8%E8%A7%81%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/15/iOS常见访问地址/</id>
     <published>2018-10-15T01:57:48.000Z</published>
     <updated>2018-10-15T02:05:49.114Z</updated>
     
@@ -167,17 +167,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>Unity 学习(二)</title>
-    <link href="http://yoursite.com/2018/10/15/Unity%20%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"/>
-    <id>http://yoursite.com/2018/10/15/Unity 学习(二)/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/15/Unity%20%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/15/Unity 学习(二)/</id>
     <published>2018-10-15T01:57:48.000Z</published>
     <updated>2018-11-13T02:10:59.059Z</updated>
     
@@ -192,17 +192,17 @@
     
     </summary>
     
-      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/categories/Unity/"/>
     
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
     
   </entry>
   
   <entry>
     <title>iOS App扫码下载</title>
-    <link href="http://yoursite.com/2018/10/14/iOS%20App%E6%89%AB%E7%A0%81%E4%B8%8B%E8%BD%BD/"/>
-    <id>http://yoursite.com/2018/10/14/iOS App扫码下载/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/14/iOS%20App%E6%89%AB%E7%A0%81%E4%B8%8B%E8%BD%BD/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/14/iOS App扫码下载/</id>
     <published>2018-10-14T01:57:48.000Z</published>
     <updated>2018-11-08T07:46:45.646Z</updated>
     
@@ -217,17 +217,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>Unity 学习(一)</title>
-    <link href="http://yoursite.com/2018/10/11/Unity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"/>
-    <id>http://yoursite.com/2018/10/11/Unity 学习(一)/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/11/Unity%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/11/Unity 学习(一)/</id>
     <published>2018-10-11T08:09:39.000Z</published>
     <updated>2018-10-12T08:02:55.420Z</updated>
     
@@ -242,23 +242,23 @@
     
     </summary>
     
-      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/categories/Unity/"/>
     
     
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
     
   </entry>
   
   <entry>
     <title>移动端游戏开发分析</title>
-    <link href="http://yoursite.com/2018/10/10/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com/2018/10/10/移动端游戏开发分析/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/10/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%88%86%E6%9E%90/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/10/移动端游戏开发分析/</id>
     <published>2018-10-10T08:09:39.000Z</published>
-    <updated>2018-10-12T02:00:34.552Z</updated>
+    <updated>2018-11-26T09:15:13.388Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="现状分析"><a href="#现状分析" class="headerlink" title="现状分析"></a>现状分析</h2><h3 id="公司现状"><a href="#公司现状" class="headerlink" title="公司现状"></a>公司现状</h3><p>项目结束后移动端会进入一段时间的休整期,有一定的时间和精力,公司的开发人员没有进行过游戏开发,不了解开发相关事项.</p><h3 id="技术现状"><a href="#技术现状" class="headerlink" title="技术现状"></a>技术现状</h3><p>目前技术还未掌握,但是语言相关的基础已经有了,常见的游戏脚本语言有C / C++ , C# , javascript等</p><h3 id="市场现状"><a href="#市场现状" class="headerlink" title="市场现状"></a>市场现状</h3><p>游戏市场永远没有饱和,但是游戏是有寿命的,一般的单机游戏盈利寿命最长是半年,网络游戏也是需要通过不断更新新的内容来维持用户的新鲜感,才能延续下去</p><p>好的游戏寿命一般较长,差的游戏说不定刚出来就死了.</p><p>移动端游戏是新兴市场,游戏质量一般只要过关,总有人玩,但是必须要有人去刷榜,保持下载量</p><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><h3 id="语言选择"><a href="#语言选择" class="headerlink" title="语言选择"></a>语言选择</h3><p>了解C/C++ 或者了解 C# 语言基本语法</p><h3 id="工具选择"><a href="#工具选择" class="headerlink" title="工具选择"></a>工具选择</h3><h5 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a>Unity</h5><p>优点: 简单易用,支持3D,2D,功能全面,资料众多,前端游戏首选</p><p>缺点: 资源占用较大,渲染较差,内存管理欠缺</p><p>团队模式收费</p><p>移动端对渲染要求较低,所以一般优先选择Unity</p><h5 id="Cocos2d-x"><a href="#Cocos2d-x" class="headerlink" title="Cocos2d-x"></a>Cocos2d-x</h5><p>优点: 简单,易用, 免费</p><p>缺点: 提升到3D表现一般,过时,现在社区不活跃</p><p>百度百科显示Cocos2d-x 占据高低端市场 超过70%,但是那已经是2013年的数据,这几年Unity的表现十分抢眼,优先选择Unity</p><h5 id="UE4"><a href="#UE4" class="headerlink" title="UE4"></a>UE4</h5><p>优点: 渲染优秀,内存优化好,占用资源适中,工具免费</p><p>缺点: 学习稍微困难,学习资源少</p><p>学习完Unity如果需要进阶,我们可以直接切换到UE4,渲染效果会提升非常大,有Unity的基础,UE4也会非常好学</p><h3 id="资源选择"><a href="#资源选择" class="headerlink" title="资源选择"></a>资源选择</h3><p>建议淘宝直接购买资源,或者选择maya制作资源</p><p>maya 下载目录 <a href="http://www.ifunmac.com/2017/10/maya-2018-1/" target="_blank" rel="noopener">http://www.ifunmac.com/2017/10/maya-2018-1/</a><br>maya 学习目录 <a href="https://huke88.com/route/maya.html?sem=baidu&amp;kw=106402" target="_blank" rel="noopener">https://huke88.com/route/maya.html?sem=baidu&amp;kw=106402</a></p><h3 id="建议分工"><a href="#建议分工" class="headerlink" title="建议分工"></a>建议分工</h3><p>美术可以有专门的人研究下maya,maya现在也是傻瓜式建模</p><p>地图模型需要有人跟进</p><p>益智类需要关卡设计</p><p>需要有美工提供原图,或者淘宝购买原图,或者逆向别人的图</p><p>代码开发前期可以都投入,后期撤出研究其他内容</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="现状分析"><a href="#现状分析" class="headerlink" title="现状分析"></a>现状分析</h2><h3 id="公司现状"><a href="#公司现状" class="headerlink" title="公司现状"></a>公司现状</h3><p>项目结束后移动端会进入一段时间的休整期,有一定的时间和精力,公司的开发人员没有进行过游戏开发,不了解开发相关事项.</p><h3 id="技术现状"><a href="#技术现状" class="headerlink" title="技术现状"></a>技术现状</h3><p>目前技术还未掌握,但是语言相关的基础已经有了,常见的游戏脚本语言有C / C++ , C# , javascript等</p><h3 id="学习目的"><a href="#学习目的" class="headerlink" title="学习目的"></a>学习目的</h3><p>游戏包含了当前最新的计算机图形学,算法,数据结构等重点内容</p><h3 id="市场现状"><a href="#市场现状" class="headerlink" title="市场现状"></a>市场现状</h3><p>游戏市场永远没有饱和,但是游戏是有寿命的,一般的单机游戏盈利寿命最长是半年,网络游戏也是需要通过不断更新新的内容来维持用户的新鲜感,才能延续下去</p><p>好的游戏寿命一般较长,差的游戏说不定刚出来就死了.</p><p>移动端游戏是新兴市场,游戏质量一般只要过关,总有人玩,但是必须要有人去刷榜,保持下载量</p><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><h3 id="语言选择"><a href="#语言选择" class="headerlink" title="语言选择"></a>语言选择</h3><p>了解C/C++ 或者了解 C# 语言基本语法</p><h3 id="工具选择"><a href="#工具选择" class="headerlink" title="工具选择"></a>工具选择</h3><h4 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a>Unity</h4><p>优点: 简单易用,支持3D,2D,功能全面,资料众多,前端游戏首选</p><p>缺点: 资源占用较大,渲染较差,内存管理欠缺</p><p>团队模式收费</p><p>移动端对渲染要求较低,所以一般优先选择Unity</p><h4 id="Cocos2d-x"><a href="#Cocos2d-x" class="headerlink" title="Cocos2d-x"></a>Cocos2d-x</h4><p>优点: 简单,易用, 免费</p><p>缺点: 提升到3D表现一般,过时,现在社区不活跃</p><p>百度百科显示Cocos2d-x 占据高低端市场 超过70%,但是那已经是2013年的数据,这几年Unity的表现十分抢眼,优先选择Unity</p><h4 id="UE4"><a href="#UE4" class="headerlink" title="UE4"></a>UE4</h4><p>优点: 渲染优秀,内存优化好,占用资源适中,工具免费</p><p>缺点: 学习稍微困难,学习资源少,新增一个:mac跑起来编译好久😂</p><p>学习完Unity如果需要进阶,我们可以直接切换到UE4,渲染效果会提升非常大,有Unity的基础,UE4也会非常好学</p><h3 id="资源选择"><a href="#资源选择" class="headerlink" title="资源选择"></a>资源选择</h3><p>建议淘宝直接购买资源,或者选择maya制作资源</p><p>maya 下载目录 <a href="http://www.ifunmac.com/2017/10/maya-2018-1/" target="_blank" rel="noopener">http://www.ifunmac.com/2017/10/maya-2018-1/</a><br>maya 学习目录 <a href="https://huke88.com/route/maya.html?sem=baidu&amp;kw=106402" target="_blank" rel="noopener">https://huke88.com/route/maya.html?sem=baidu&amp;kw=106402</a></p><h3 id="建议分工"><a href="#建议分工" class="headerlink" title="建议分工"></a>建议分工</h3><h4 id="策划"><a href="#策划" class="headerlink" title="策划:"></a>策划:</h4><p>策划的事情需要很多文档</p><p>包括游戏的数据, 玩法, 关卡的难度, 通关的条件, 游戏的世界观等等</p><h4 id="美术"><a href="#美术" class="headerlink" title="美术:"></a>美术:</h4><p>美术可以有专门的人研究下maya</p><p>地图以及模型</p><p>需要有美工提供原图,或者淘宝购买原图,或者逆向别人的图</p><h4 id="程序"><a href="#程序" class="headerlink" title="程序:"></a>程序:</h4><p>程序人员都可以投入,程序是一个最终的产品成型过程</p>]]></content>
     
     <summary type="html">
     
@@ -269,23 +269,23 @@
     
     </summary>
     
-      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/categories/Unity/"/>
     
     
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
     
   </entry>
   
   <entry>
     <title>Unity 破解版下载</title>
-    <link href="http://yoursite.com/2018/10/10/Unity%20%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD/"/>
-    <id>http://yoursite.com/2018/10/10/Unity 破解版下载/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/10/Unity%20%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/10/Unity 破解版下载/</id>
     <published>2018-10-10T02:59:49.000Z</published>
-    <updated>2018-11-16T09:15:18.395Z</updated>
+    <updated>2018-11-26T09:02:40.772Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>本文仅供技术交流,没有任何商业目的.</p><h2 id="针对人群"><a href="#针对人群" class="headerlink" title="针对人群"></a>针对人群</h2><p>mac 环境下的Unity 开发人员</p><h2 id="破解版步骤"><a href="#破解版步骤" class="headerlink" title="破解版步骤"></a>破解版步骤</h2><h3 id="首先下载Unity-官方版本"><a href="#首先下载Unity-官方版本" class="headerlink" title="首先下载Unity 官方版本"></a>首先下载Unity 官方版本</h3><p>目前试验支持的版本到<code>2018.2.15f1</code><br><a href="https://unity3d.com/cn/get-unity/download/archive" target="_blank" rel="noopener">https://unity3d.com/cn/get-unity/download/archive</a></p><h3 id="按照步骤一直下一步"><a href="#按照步骤一直下一步" class="headerlink" title="按照步骤一直下一步"></a>按照步骤一直下一步</h3><p>安装成功即可,先不要打开</p><h3 id="下载破解软件"><a href="#下载破解软件" class="headerlink" title="下载破解软件"></a>下载破解软件</h3><p>链接:<a href="https://pan.baidu.com/s/1_IKsotfeoSQhxMUMy7LGVA" target="_blank" rel="noopener">https://pan.baidu.com/s/1_IKsotfeoSQhxMUMy7LGVA</a><br>密码:787v</p><p>下载后打开,如图所示</p><p><img src="/2018/10/10/Unity 破解版下载/pojie1.png" alt=""></p><p>到<code>应用程序</code> 里面找到Unity, 拖动到上面针筒的位置,然后点击<code>+</code>号.</p><p>然后，点击破解工具的工具栏：<code>Tools-&gt;Copy Unity License files</code>。破解完成。</p><h2 id="参看文档"><a href="#参看文档" class="headerlink" title="参看文档"></a>参看文档</h2><p><a href="http://www.ceeger.com/forum/read.php?tid=23396&amp;fid=8&amp;page=1" target="_blank" rel="noopener">http://www.ceeger.com/forum/read.php?tid=23396&amp;fid=8&amp;page=1</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>本文仅供技术交流,没有任何商业目的.</p><h2 id="针对人群"><a href="#针对人群" class="headerlink" title="针对人群"></a>针对人群</h2><p>mac 环境下的Unity 开发人员</p><h2 id="破解版步骤"><a href="#破解版步骤" class="headerlink" title="破解版步骤"></a>破解版步骤</h2><h3 id="首先下载Unity-官方版本"><a href="#首先下载Unity-官方版本" class="headerlink" title="首先下载Unity 官方版本"></a>首先下载Unity 官方版本</h3><p>目前试验支持的版本到<code>2018.2.15f1</code><br><a href="https://unity3d.com/cn/get-unity/download/archive" target="_blank" rel="noopener">https://unity3d.com/cn/get-unity/download/archive</a></p><h3 id="按照步骤一直下一步"><a href="#按照步骤一直下一步" class="headerlink" title="按照步骤一直下一步"></a>按照步骤一直下一步</h3><p>安装成功即可,先不要打开</p><h3 id="下载破解软件"><a href="#下载破解软件" class="headerlink" title="下载破解软件"></a>下载破解软件</h3><p>链接:<a href="https://pan.baidu.com/s/1_IKsotfeoSQhxMUMy7LGVA" target="_blank" rel="noopener">https://pan.baidu.com/s/1_IKsotfeoSQhxMUMy7LGVA</a><br>密码:787v</p><p>下载后打开,如图所示</p><p><img src="/2018/10/10/Unity 破解版下载/pojie1.png" alt=""></p><p>到<code>应用程序</code> 里面找到Unity, 拖动到上面针筒的位置,然后点击<code>+</code>号.</p><p>然后，点击破解工具的工具栏：<code>Tools-&gt;Copy Unity License files</code>。破解完成。</p><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://www.ceeger.com/forum/read.php?tid=23396&amp;fid=8&amp;page=1" target="_blank" rel="noopener">http://www.ceeger.com/forum/read.php?tid=23396&amp;fid=8&amp;page=1</a></p>]]></content>
     
     <summary type="html">
     
@@ -296,19 +296,19 @@
     
     </summary>
     
-      <category term="Unity" scheme="http://yoursite.com/categories/Unity/"/>
-    
-      <category term="Unity破解" scheme="http://yoursite.com/categories/Unity/Unity%E7%A0%B4%E8%A7%A3/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/categories/Unity/"/>
     
     
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
+      <category term="Unity" scheme="https://blog.williamlovealisa.cn/tags/Unity/"/>
+    
+      <category term="Unity破解" scheme="https://blog.williamlovealisa.cn/tags/Unity%E7%A0%B4%E8%A7%A3/"/>
     
   </entry>
   
   <entry>
     <title>Xcode Command工具开发</title>
-    <link href="http://yoursite.com/2018/10/10/Xcode%20Command%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/"/>
-    <id>http://yoursite.com/2018/10/10/Xcode Command工具开发/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/10/Xcode%20Command%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/10/Xcode Command工具开发/</id>
     <published>2018-10-10T02:53:56.000Z</published>
     <updated>2018-10-10T08:41:49.120Z</updated>
     
@@ -323,19 +323,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/categories/iOS/"/>
     
     
-      <category term="Command" scheme="http://yoursite.com/tags/Command/"/>
+      <category term="Command" scheme="https://blog.williamlovealisa.cn/tags/Command/"/>
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>Xcode9  如何支持iOS 12设备调试</title>
-    <link href="http://yoursite.com/2018/10/10/Xcode9%20%20%E5%A6%82%E4%BD%95%E6%94%AF%E6%8C%81iOS%2012%E8%AE%BE%E5%A4%87%E8%B0%83%E8%AF%95/"/>
-    <id>http://yoursite.com/2018/10/10/Xcode9  如何支持iOS 12设备调试/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/10/10/Xcode9%20%20%E5%A6%82%E4%BD%95%E6%94%AF%E6%8C%81iOS%2012%E8%AE%BE%E5%A4%87%E8%B0%83%E8%AF%95/"/>
+    <id>https://blog.williamlovealisa.cn/2018/10/10/Xcode9  如何支持iOS 12设备调试/</id>
     <published>2018-10-10T02:53:56.000Z</published>
     <updated>2018-10-17T06:09:04.626Z</updated>
     
@@ -350,19 +350,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/categories/iOS/"/>
     
     
-      <category term="Command" scheme="http://yoursite.com/tags/Command/"/>
+      <category term="Command" scheme="https://blog.williamlovealisa.cn/tags/Command/"/>
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>越狱开发(一)-准备</title>
-    <link href="http://yoursite.com/2018/09/30/%E8%B6%8A%E7%8B%B1%E5%BC%80%E5%8F%91-%E4%B8%80-%E5%87%86%E5%A4%87/"/>
-    <id>http://yoursite.com/2018/09/30/越狱开发-一-准备/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/30/%E8%B6%8A%E7%8B%B1%E5%BC%80%E5%8F%91-%E4%B8%80-%E5%87%86%E5%A4%87/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/30/越狱开发-一-准备/</id>
     <published>2018-09-30T15:07:39.000Z</published>
     <updated>2018-09-30T15:09:33.222Z</updated>
     
@@ -377,19 +377,19 @@
     
     </summary>
     
-      <category term="越狱" scheme="http://yoursite.com/categories/%E8%B6%8A%E7%8B%B1/"/>
+      <category term="越狱" scheme="https://blog.williamlovealisa.cn/categories/%E8%B6%8A%E7%8B%B1/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="https://blog.williamlovealisa.cn/tags/iOS/"/>
     
-      <category term="越狱" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1/"/>
+      <category term="越狱" scheme="https://blog.williamlovealisa.cn/tags/%E8%B6%8A%E7%8B%B1/"/>
     
   </entry>
   
   <entry>
     <title>CSharp学习二</title>
-    <link href="http://yoursite.com/2018/09/21/CSharp%E5%AD%A6%E4%B9%A0%E4%BA%8C/"/>
-    <id>http://yoursite.com/2018/09/21/CSharp学习二/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/21/CSharp%E5%AD%A6%E4%B9%A0%E4%BA%8C/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/21/CSharp学习二/</id>
     <published>2018-09-21T06:24:26.000Z</published>
     <updated>2018-10-15T03:01:41.475Z</updated>
     
@@ -404,17 +404,17 @@
     
     </summary>
     
-      <category term="C#" scheme="http://yoursite.com/categories/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/categories/C/"/>
     
     
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>CSharp学习一</title>
-    <link href="http://yoursite.com/2018/09/20/CSharp%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://yoursite.com/2018/09/20/CSharp学习一/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/20/CSharp%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/20/CSharp学习一/</id>
     <published>2018-09-20T08:09:39.000Z</published>
     <updated>2018-10-15T03:01:53.963Z</updated>
     
@@ -429,17 +429,17 @@
     
     </summary>
     
-      <category term="C#" scheme="http://yoursite.com/categories/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/categories/C/"/>
     
     
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+      <category term="C#" scheme="https://blog.williamlovealisa.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Hexo 开始写笔记</title>
-    <link href="http://yoursite.com/2018/09/20/Hexo-%E5%BC%80%E5%A7%8B%E5%86%99%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/09/20/Hexo-开始写笔记/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/20/Hexo-%E5%BC%80%E5%A7%8B%E5%86%99%E7%AC%94%E8%AE%B0/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/20/Hexo-开始写笔记/</id>
     <published>2018-09-20T01:57:48.000Z</published>
     <updated>2018-11-20T07:16:32.624Z</updated>
     
@@ -454,17 +454,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo实用工具</title>
-    <link href="http://yoursite.com/2018/09/18/Hexo%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    <id>http://yoursite.com/2018/09/18/Hexo实用工具/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/18/Hexo%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/18/Hexo实用工具/</id>
     <published>2018-09-18T14:53:56.000Z</published>
     <updated>2018-11-07T08:29:52.128Z</updated>
     
@@ -479,17 +479,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo NexT主题优化2</title>
-    <link href="http://yoursite.com/2018/09/13/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%962/"/>
-    <id>http://yoursite.com/2018/09/13/Hexo NexT主题优化2/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/13/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%962/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/13/Hexo NexT主题优化2/</id>
     <published>2018-09-13T08:30:32.000Z</published>
     <updated>2018-10-12T09:06:20.253Z</updated>
     
@@ -504,17 +504,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo NexT主题优化</title>
-    <link href="http://yoursite.com/2018/09/12/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
-    <id>http://yoursite.com/2018/09/12/Hexo NexT主题优化/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/12/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/12/Hexo NexT主题优化/</id>
     <published>2018-09-12T06:30:00.000Z</published>
     <updated>2018-09-30T08:25:21.909Z</updated>
     
@@ -529,21 +529,21 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/tags/Hexo/"/>
     
-      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+      <category term="NexT" scheme="https://blog.williamlovealisa.cn/tags/NexT/"/>
     
-      <category term="主题" scheme="http://yoursite.com/tags/%E4%B8%BB%E9%A2%98/"/>
+      <category term="主题" scheme="https://blog.williamlovealisa.cn/tags/%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>Hexo 简单美化</title>
-    <link href="http://yoursite.com/2018/09/12/Hexo%20%E7%BE%8E%E5%8C%96/"/>
-    <id>http://yoursite.com/2018/09/12/Hexo 美化/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/12/Hexo%20%E7%BE%8E%E5%8C%96/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/12/Hexo 美化/</id>
     <published>2018-09-12T02:09:39.000Z</published>
     <updated>2018-09-30T08:26:25.960Z</updated>
     
@@ -555,17 +555,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>如何优雅的创建Hexo</title>
-    <link href="http://yoursite.com/2018/09/10/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E5%88%9B%E5%BB%BAHexo/"/>
-    <id>http://yoursite.com/2018/09/10/如何优雅的创建Hexo/</id>
+    <link href="https://blog.williamlovealisa.cn/2018/09/10/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E5%88%9B%E5%BB%BAHexo/"/>
+    <id>https://blog.williamlovealisa.cn/2018/09/10/如何优雅的创建Hexo/</id>
     <published>2018-09-10T08:42:38.000Z</published>
     <updated>2018-09-29T06:31:13.300Z</updated>
     
@@ -580,10 +580,10 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://blog.williamlovealisa.cn/tags/Hexo/"/>
     
   </entry>
   
