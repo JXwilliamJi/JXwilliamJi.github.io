@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bitbug_favicon32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bitbug_favicon16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Unity," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WilliamJi's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Unity 编辑器可以扩展,添加自己的需求 Unity扩展的相对路径 最好在 Assets/Editor文件夹下,因为Editor文件夹会自己编译成/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll 文件, 打包时不会链接到最终的包中 窗口扩展在Assets创建一个Editor文件夹,文件夹里面放置的文件用作UnityEditor 的扩展  为">
+<meta name="keywords" content="Unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity 学习(四) 拓展编辑器">
+<meta property="og:url" content="https://blog.williamlovealisa.cn/2018/10/15/Unity 学习(二) 拓展编辑器/index.html">
+<meta property="og:site_name" content="WilliamJi&#39;s Blog">
+<meta property="og:description" content="Unity 编辑器可以扩展,添加自己的需求 Unity扩展的相对路径 最好在 Assets/Editor文件夹下,因为Editor文件夹会自己编译成/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll 文件, 打包时不会链接到最终的包中 窗口扩展在Assets创建一个Editor文件夹,文件夹里面放置的文件用作UnityEditor 的扩展  为">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-26T09:53:54.006Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity 学习(四) 拓展编辑器">
+<meta name="twitter:description" content="Unity 编辑器可以扩展,添加自己的需求 Unity扩展的相对路径 最好在 Assets/Editor文件夹下,因为Editor文件夹会自己编译成/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll 文件, 打包时不会链接到最终的包中 窗口扩展在Assets创建一个Editor文件夹,文件夹里面放置的文件用作UnityEditor 的扩展  为">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://blog.williamlovealisa.cn/2018/10/15/Unity 学习(二) 拓展编辑器/"/>
+
+
+
+
+
+  <title>Unity 学习(四) 拓展编辑器 | WilliamJi's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?133b0744d4ddd3a6465d70af3789ff5a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WilliamJi's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Coder can change world!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            所有文章
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.williamlovealisa.cn/2018/10/15/Unity 学习(二) 拓展编辑器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ji">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar2.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WilliamJi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Unity 学习(四) 拓展编辑器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T09:57:48+08:00">
+                2018-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/15/Unity 学习(二) 拓展编辑器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/15/Unity 学习(二) 拓展编辑器/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Unity 编辑器可以扩展,添加自己的需求</p>
+<p>Unity扩展的相对路径 最好在 Assets/Editor文件夹下,因为Editor文件夹会自己编译成<code>/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll</code> 文件, 打包时不会链接到最终的包中</p>
+<h2 id="窗口扩展"><a href="#窗口扩展" class="headerlink" title="窗口扩展"></a>窗口扩展</h2><p>在<code>Assets</code>创建一个<code>Editor</code>文件夹,文件夹里面放置的文件用作UnityEditor 的扩展</p>
+<ul>
+<li>为什么要扩展?</li>
+</ul>
+<p>比如将某个场景或者游戏物体保存为XML,但是Unity 没有提供方法,我们需要自己写</p>
+<ul>
+<li>书写格式</li>
+</ul>
+<p><code>[MenuItem(&quot;path&quot;,isValidateFunc,num)]</code></p>
+<p>第一个参数 path 表明在哪里添加拓展,<br>第二个参数 表明是否是验证过的方法<br>第三个参数 表明是 优先级,多个在同级目录的时候有作用</p>
+<h3 id="Project-窗口扩展"><a href="#Project-窗口扩展" class="headerlink" title="Project 窗口扩展"></a>Project 窗口扩展</h3><h4 id="自定义右击"><a href="#自定义右击" class="headerlink" title="自定义右击"></a>自定义右击</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// MenuItem Assets 表明在Project 窗口目录下右击的列表中</span><br><span class="line">[MenuItem(&quot;Assets/My Tools/Tool1&quot;,false,1)]</span><br><span class="line">static void doSome1 () &#123;</span><br><span class="line">	Debug.Log(&quot;Dosome1&quot;);</span><br><span class="line">	// </span><br><span class="line">	if (Selection.activeObject != null)&#123;</span><br><span class="line">		Debug.Log(Selection.activeObject.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="在右击的-create-目录下新增-Tool3"><a href="#在右击的-create-目录下新增-Tool3" class="headerlink" title="在右击的 create 目录下新增 Tool3"></a>在右击的 create 目录下新增 Tool3</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 1000 就在列表的最下面</span><br><span class="line">[MenuItem(&quot;Assets/Create/Tool3&quot;,false,1000)]</span><br><span class="line">static void doSome2 () &#123;</span><br><span class="line">	Debug.Log(&quot;Dosome2&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="拓展布局-选中的条目增加按钮"><a href="#拓展布局-选中的条目增加按钮" class="headerlink" title="拓展布局: 选中的条目增加按钮"></a>拓展布局: 选中的条目增加按钮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 声明一旦初始化就调用的方法</span><br><span class="line">[InitializeOnLoadMethod]</span><br><span class="line">static void doSome4() &#123;</span><br><span class="line">	// 所有可见列表项的 onGUI 事件触发的代理,相当于绘制一次一个物体就会调用一次</span><br><span class="line">	EditorApplication.projectWindowItemOnGUI = delegate(string guid, Rect sectionRect) &#123;</span><br><span class="line">			</span><br><span class="line">		// 如果选中物体 并且选中的物体是系统资源</span><br><span class="line">		if (Selection.activeObject &amp;&amp; guid == AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Selection.activeObject)))&#123;</span><br><span class="line">			float width = 50;</span><br><span class="line">			float d = 1;</span><br><span class="line">			sectionRect.x += (sectionRect.width - width);</span><br><span class="line">			sectionRect.y += d;</span><br><span class="line">			sectionRect.width = width;</span><br><span class="line">			sectionRect.height -= (2 * d);</span><br><span class="line"></span><br><span class="line">			// 以GUI红色创建一个Button</span><br><span class="line">			GUI.color = Color.red;</span><br><span class="line">			if (GUI.Button(sectionRect,&quot;Click&quot;))&#123;</span><br><span class="line">				// 逻辑代码</span><br><span class="line">				Debug.LogFormat(&quot;click: &#123;0&#125;&quot;,Selection.activeObject.name);</span><br><span class="line">			&#125;</span><br><span class="line">			// GUI还原成白色,渲染之后的所有的控件,如果不设置后面所有的控件都是红色</span><br><span class="line">			GUI.color = Color.white;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="监听资源的变化"><a href="#监听资源的变化" class="headerlink" title="监听资源的变化"></a>监听资源的变化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// 首先创建一个继承自 `AssetModificationProcessor`的类</span><br><span class="line">public class  UnityTool: UnityEditor.AssetModificationProcessor &#123;</span><br><span class="line">	</span><br><span class="line">	// 1. 如果只关心发生变化, 使用前两个函数</span><br><span class="line">	[InitializeOnLoadMethod]</span><br><span class="line">	static void func1 () &#123;</span><br><span class="line">		EditorApplication.projectChanged += dele;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// </span><br><span class="line">	static void dele () &#123;</span><br><span class="line">		// 即将改变</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// 2. 如果关心具体什么变化,直接后面的函数</span><br><span class="line">	// 资源即将被创建</span><br><span class="line">	public static void OnWillCreateAsset(string path) &#123;</span><br><span class="line">		Debug.Log(&quot;create Asset in path: &quot; + path);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 即将双击打开文件,目前的问题是显示的是 meta 文件,2种可能: 1. 实际修改的就是 meta 2. 返回的有问题</span><br><span class="line">	public static bool IsOpenForEdit (string assetPath, out string message) &#123;</span><br><span class="line">		message = null;</span><br><span class="line">		// Debug.LogFormat(&quot;AssetPath: &#123;0&#125;&quot;,assetPath);</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 即将删除,可以控制磁盘上是否允许删除, 问题是 DidNotDelete 是允许删除 , DidDelete 是不允许删除</span><br><span class="line">	public static AssetDeleteResult OnWillDeleteAsset(string assetpath, RemoveAssetOptions opt) &#123;</span><br><span class="line">		Debug.LogFormat(&quot;delete: &#123;0&#125;&quot;, assetpath);</span><br><span class="line">		return AssetDeleteResult.DidNotDelete;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 即将移动,可以控制磁盘上是否移动, 问题是 DidNotMove 是允许移动 , DidMove 是不允许移动</span><br><span class="line">	public static AssetMoveResult OnWillMoveAsset(string oldPath, string newPath) &#123;</span><br><span class="line">		Debug.LogFormat(&quot;允许moveFrom: &#123;0&#125; to : &#123;1&#125;&quot;, oldPath,newPath);</span><br><span class="line">		return AssetMoveResult.DidNotMove;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 即将保存, 貌似只对Scene 的保存有反应</span><br><span class="line">	public static string[] OnWillSaveAssets(string[] path) &#123;</span><br><span class="line">		if (path != null)&#123;</span><br><span class="line">			Debug.LogFormat(&quot;Savepath: &#123;0&#125;&quot;,string.Join(&quot;,&quot;,path));</span><br><span class="line">		&#125;</span><br><span class="line">		return path;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Hierachy-窗口扩展"><a href="#Hierachy-窗口扩展" class="headerlink" title="Hierachy 窗口扩展"></a>Hierachy 窗口扩展</h3><h4 id="自定义右击-1"><a href="#自定义右击-1" class="headerlink" title="自定义右击"></a>自定义右击</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;GameObject/My Create/Cube&quot;,false,0)]</span><br><span class="line">static void doSome4 () &#123;</span><br><span class="line">	GameObject.CreatePrimitive(PrimitiveType.Cube);</span><br><span class="line">	Debug.Log(&quot;Dosome4&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="拓展布局-选中的条目增加按钮-1"><a href="#拓展布局-选中的条目增加按钮-1" class="headerlink" title="拓展布局 : 选中的条目增加按钮"></a>拓展布局 : 选中的条目增加按钮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 在一开始初始化就</span><br><span class="line">[InitializeOnLoadMethod]</span><br><span class="line">static void newInit () &#123;</span><br><span class="line">	EditorApplication.hierarchyWindowItemOnGUI = delegate (int instanceId, Rect rect) &#123;</span><br><span class="line">		if (Selection.activeObject &amp;&amp; Selection.activeObject.GetInstanceID() == instanceId)&#123;</span><br><span class="line">			float width = 50;</span><br><span class="line">			float height = 20;</span><br><span class="line">				</span><br><span class="line">			// 调整按钮的位置</span><br><span class="line">			rect.x += rect.width - width;</span><br><span class="line">			rect.width = width;</span><br><span class="line">			rect.height = height;</span><br><span class="line"></span><br><span class="line">			// 创建按钮,设置按钮图标, 设置点击事件</span><br><span class="line">			if (GUI.Button(rect,AssetDatabase.LoadAssetAtPath&lt;Texture&gt;(&quot;Assets/timg.jpeg&quot;)))&#123;</span><br><span class="line">				Debug.LogFormat(&quot;Click At: &#123;0&#125;&quot;,Selection.activeObject.name);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="右击使用自定义的列表"><a href="#右击使用自定义的列表" class="headerlink" title="右击使用自定义的列表"></a>右击使用自定义的列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">// 1. 准备好 方法列表</span><br><span class="line">[MenuItem(&quot;Window/Test/jixiao&quot;)]</span><br><span class="line">static void func1 () &#123;</span><br><span class="line">	Debug.Log(&quot;func1&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">[MenuItem(&quot;Window/Test/momo&quot;)]</span><br><span class="line">static void func2 () &#123;</span><br><span class="line">	Debug.Log(&quot;func2&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">[MenuItem(&quot;Window/Test/雨凇/mono&quot;)]</span><br><span class="line">static void func3 () &#123;</span><br><span class="line">	Debug.Log(&quot;func3&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 2. 添加UI替换方法</span><br><span class="line">[InitializeOnLoadMethod]</span><br><span class="line">static void replace () &#123;</span><br><span class="line">	EditorApplication.hierarchyWindowItemOnGUI += onHierachyGUI;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 3. 替换方法</span><br><span class="line">static void onHierachyGUI (int instanceID, Rect selectionRect) &#123;</span><br><span class="line">	// 有事件发生,且是鼠标右键点击事件, 点击的位置在某个控件上,  当前的事件是鼠标右键弹起时</span><br><span class="line">	if (Event.current != null &amp;&amp; selectionRect.Contains(Event.current.mousePosition) &amp;&amp; Event.current.button == 1 &amp;&amp; Event.current.type &lt;= EventType.MouseUp) &#123;</span><br><span class="line">		// 只有点到控件上才有效果</span><br><span class="line">		GameObject obj = EditorUtility.InstanceIDToObject(instanceID) as GameObject;</span><br><span class="line">		if (obj)&#123;</span><br><span class="line">			// 鼠标点击的位置</span><br><span class="line">			Vector2 mousePosition = Event.current.mousePosition;</span><br><span class="line">			// 创建列表</span><br><span class="line">			EditorUtility.DisplayPopupMenu(new Rect(mousePosition.x,mousePosition.y,0,0),&quot;Window/Test&quot;,null);</span><br><span class="line">			// 使用新的事件替代原来的鼠标事件,注释掉意味着执行完这里的代码还会继续执行系统的代码</span><br><span class="line">			Event.current.Use();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="重写某些功能"><a href="#重写某些功能" class="headerlink" title="重写某些功能"></a>重写某些功能</h4><p>2018 版本貌似不支持</p>
+<h3 id="拓展-Inspector-视图"><a href="#拓展-Inspector-视图" class="headerlink" title="拓展 Inspector 视图"></a>拓展 Inspector 视图</h3><h4 id="拓展原生组件"><a href="#拓展原生组件" class="headerlink" title="拓展原生组件"></a>拓展原生组件</h4><p>修改<code>Camera</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line"></span><br><span class="line">// 修改的组件类型</span><br><span class="line">[CustomEditor(typeof(Camera))]</span><br><span class="line">public class MyEditor: Editor &#123;</span><br><span class="line"></span><br><span class="line">	public override void OnInspectorGUI() &#123;</span><br><span class="line">		if (GUILayout.Button(&quot;拓展按钮&quot;)) &#123;</span><br><span class="line">			// 事件</span><br><span class="line">			Debug.Log(&quot;xxxx&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		// 继续绘制</span><br><span class="line">		base.OnInspectorGUI();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="拓展某些已经被重写但封装无法访问的组件"><a href="#拓展某些已经被重写但封装无法访问的组件" class="headerlink" title="拓展某些已经被重写但封装无法访问的组件"></a>拓展某些已经被重写但封装无法访问的组件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line">using System.Reflection; </span><br><span class="line"></span><br><span class="line">// 修改的组件类型</span><br><span class="line">[CustomEditor(typeof(Transform))]</span><br><span class="line">public class MyEditor: Editor &#123;</span><br><span class="line"></span><br><span class="line">	private Editor m_Editor;</span><br><span class="line">	void OnEnable() &#123;</span><br><span class="line">		// 通过反射获取到方法</span><br><span class="line">		m_Editor = Editor.CreateEditor(target,Assembly.GetAssembly(typeof(Editor)).GetType(&quot;UnityEditor.TransformInspector&quot;,true));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 绘制</span><br><span class="line">	public override void OnInspectorGUI () &#123;</span><br><span class="line">		if (GUILayout.Button(&quot;拓展按钮&quot;))</span><br><span class="line">		&#123;</span><br><span class="line">			Debug.Log(&quot;xxxxxxxxxx&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		m_Editor.OnInspectorGUI();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="组件不可编辑"><a href="#组件不可编辑" class="headerlink" title="组件不可编辑"></a>组件不可编辑</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if (GUILayout.Button(&quot;拓展按钮&quot;))&#123;</span><br><span class="line">	Debug.Log(&quot;xxxxxxxxxx&quot;);</span><br><span class="line">&#125;</span><br><span class="line">// 下面内容不可编辑</span><br><span class="line">GUI.enabled = false;</span><br><span class="line">m_Editor.OnInspectorGUI();</span><br><span class="line"></span><br><span class="line">// 下面内容开始可编辑</span><br><span class="line">GUI.enabled = true;</span><br></pre></td></tr></table></figure>
+<h4 id="拓展Component的Context"><a href="#拓展Component的Context" class="headerlink" title="拓展Component的Context"></a>拓展Component的Context</h4><p>即右击某个组件时的下拉框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;CONTEXT/Transform/New Context 1&quot;)]</span><br><span class="line">static void func3 (MenuCommand comm) &#123;</span><br><span class="line">	Debug.Log(comm.context.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">[MenuItem(&quot;CONTEXT/Transform/New Context 2&quot;)]</span><br><span class="line">static void func4 (MenuCommand comm) &#123;</span><br><span class="line">	Debug.Log(comm.context.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="拓展Scene视图"><a href="#拓展Scene视图" class="headerlink" title="拓展Scene视图"></a>拓展Scene视图</h3><h3 id="热键设置"><a href="#热键设置" class="headerlink" title="热键设置"></a>热键设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[MenuItem(&quot;Assets/HotKey %#d&quot;,false,0)]</span><br><span class="line">static void onDraw () &#123;</span><br><span class="line">	Debug.Log(&quot;HotKey&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><p><code>[MenuItem(&quot;GameObject/My Create/Cube&quot;,false,0)]</code></p>
+<blockquote>
+<p>声明在Unity IDE的什么地方添加东西</p>
+</blockquote>
+<h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p><code>[InitializeOnLoadMethod]</code></p>
+<blockquote>
+<p>声明Unity IDE 一旦加载(保存)一次就会调用的方法</p>
+</blockquote>
+<h3 id="规律1"><a href="#规律1" class="headerlink" title="规律1"></a>规律1</h3><p>在Project 中右击的列表其实就是最上方工具栏的 Assets列表</p>
+<p>在Hireachy 中右击的列表其实就是最上方工具栏的 GameObject列表</p>
+<p>所以我们实质上是给 工具栏里面添加属性</p>
+<h2 id="理解不清晰内容"><a href="#理解不清晰内容" class="headerlink" title="理解不清晰内容"></a>理解不清晰内容</h2><h3 id="Center-和-Pivot-的区别"><a href="#Center-和-Pivot-的区别" class="headerlink" title="Center 和 Pivot 的区别"></a>Center 和 Pivot 的区别</h3><p>在几个物体被包含的情况下,Pivot 这个物体集合的坐标点是外部父元素的坐标点, 如果是Center, 物体的坐标点就是所有物体的中心位置</p>
+<p>多选时, Povot 以第一个元素作为坐标点, Center 以整体的中心作为坐标点</p>
+<h3 id="Global-和-Local-的区别"><a href="#Global-和-Local-的区别" class="headerlink" title="Global 和 Local 的区别"></a>Global 和 Local 的区别</h3><p>旋转时, Local 的坐标系 会跟着旋转,Global 不会</p>
+<h3 id="坐标系-ISO-以及-Persp的区别"><a href="#坐标系-ISO-以及-Persp的区别" class="headerlink" title="坐标系 ISO 以及 Persp的区别"></a>坐标系 ISO 以及 Persp的区别</h3><p>ISO坐标系 是正交模式, 在Scene中查看游戏物体是远近大小一样,</p>
+<p>Persp坐标系 摄像头类似于人眼, 在Scene中查看游戏物体就和Game中一样,近大远小</p>
+<p>但是调整这个不影响Game中 游戏物体的展示!!! 很多资料都没说这么重要的信息. 这个坐标系的作用应该是为了方便搭建地图使用的</p>
+
+      
+    </div>
+    
+    
+    
+
+    <!--版权信息-->
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/10/15/Unity 学习(二) 拓展编辑器/">Unity 学习(四) 拓展编辑器</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
+  <p><span>发布时间:</span>2018年10月15日 - 09:10</p>
+  <p><span>最后更新:</span>2018年11月26日 - 17:11</p>
+  <p><span>原始链接:</span><a href="/2018/10/15/Unity 学习(二) 拓展编辑器/" title="Unity 学习(四) 拓展编辑器">https://blog.williamlovealisa.cn/2018/10/15/Unity 学习(二) 拓展编辑器/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://blog.williamlovealisa.cn/2018/10/15/Unity 学习(二) 拓展编辑器/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/Weichat.png" alt="William Ji 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/AliPay.png" alt="William Ji 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Unity/" rel="tag"><i class="fa fa-tag"></i> Unity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/14/iOS App扫码下载/" rel="next" title="iOS App扫码下载">
+                <i class="fa fa-chevron-left"></i> iOS App扫码下载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/15/iOS常见访问地址/" rel="prev" title="iOS常见访问地址">
+                iOS常见访问地址 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b94e14b4d0774cd" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar2.jpeg"
+                alt="William Ji" />
+            
+              <p class="site-author-name" itemprop="name">William Ji</p>
+              <p class="site-description motion-element" itemprop="description">One minute on the stage needs ten years practice off stage!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/JXwilliamJi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://coding.net/u/Fastlane" target="_blank" title="Coding">
+                      
+                        <i class="fa fa-fw fa-random"></i>Coding</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/a2e80deb11a1" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-book"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/qq_31092987" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-rotate-right"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/8341797/william-ji" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://segmentfault.com/u/feiyuqingcheng" target="_blank" title="Segmentfault">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>Segmentfault</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:jxjmdx2009@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/justjavac/free-programming-books-zh_CN" title="iOS免费书籍资料" target="_blank">iOS免费书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="前端导航" target="_blank">前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.arduino.cn/" title="Arduino" target="_blank">Arduino</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.raspberrypi.org/" title="树莓派" target="_blank">树莓派</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.waitsun.com/" title="MacApp免费下载" target="_blank">MacApp免费下载</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ifunmac.com/" title="MacApp会员制下载" target="_blank">MacApp会员制下载</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#窗口扩展"><span class="nav-number">1.</span> <span class="nav-text">窗口扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-窗口扩展"><span class="nav-number">1.1.</span> <span class="nav-text">Project 窗口扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义右击"><span class="nav-number">1.1.1.</span> <span class="nav-text">自定义右击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在右击的-create-目录下新增-Tool3"><span class="nav-number">1.1.2.</span> <span class="nav-text">在右击的 create 目录下新增 Tool3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展布局-选中的条目增加按钮"><span class="nav-number">1.1.3.</span> <span class="nav-text">拓展布局: 选中的条目增加按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#监听资源的变化"><span class="nav-number">1.1.4.</span> <span class="nav-text">监听资源的变化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hierachy-窗口扩展"><span class="nav-number">1.2.</span> <span class="nav-text">Hierachy 窗口扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义右击-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">自定义右击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展布局-选中的条目增加按钮-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">拓展布局 : 选中的条目增加按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#右击使用自定义的列表"><span class="nav-number">1.2.3.</span> <span class="nav-text">右击使用自定义的列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重写某些功能"><span class="nav-number">1.2.4.</span> <span class="nav-text">重写某些功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展-Inspector-视图"><span class="nav-number">1.3.</span> <span class="nav-text">拓展 Inspector 视图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展原生组件"><span class="nav-number">1.3.1.</span> <span class="nav-text">拓展原生组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展某些已经被重写但封装无法访问的组件"><span class="nav-number">1.3.2.</span> <span class="nav-text">拓展某些已经被重写但封装无法访问的组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件不可编辑"><span class="nav-number">1.3.3.</span> <span class="nav-text">组件不可编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展Component的Context"><span class="nav-number">1.3.4.</span> <span class="nav-text">拓展Component的Context</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展Scene视图"><span class="nav-number">1.4.</span> <span class="nav-text">拓展Scene视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热键设置"><span class="nav-number">1.5.</span> <span class="nav-text">热键设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法1"><span class="nav-number">2.1.</span> <span class="nav-text">方法1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法2"><span class="nav-number">2.2.</span> <span class="nav-text">方法2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规律1"><span class="nav-number">2.3.</span> <span class="nav-text">规律1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理解不清晰内容"><span class="nav-number">3.</span> <span class="nav-text">理解不清晰内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Center-和-Pivot-的区别"><span class="nav-number">3.1.</span> <span class="nav-text">Center 和 Pivot 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Global-和-Local-的区别"><span class="nav-number">3.2.</span> <span class="nav-text">Global 和 Local 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坐标系-ISO-以及-Persp的区别"><span class="nav-number">3.3.</span> <span class="nav-text">坐标系 ISO 以及 Persp的区别</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">William Ji</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+  
+
+
+
+
+
+  
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+    <span class="post-count">Total Words:22.3k</span>
+  </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: false,
+        appId: 'tHQNEE9Bi6ywV3plQQE5XVEg-gzGzoHsz',
+        appKey: 'WEMokMM90vN6Jpw7R1r2tqNz',
+        placeholder: '_(:з」∠)_我们一起学猫叫,一起喵喵喵喵喵',
+        avatar:'avatar2.jpeg',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":120,"height":200},"mobile":{"show":true},"log":false});</script></body>
+</html>
