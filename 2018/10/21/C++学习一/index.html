@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
+<meta name="description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819202122void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;">
 <meta name="keywords" content="C++,游戏破解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++学习一">
 <meta property="og:url" content="https://blog.jshowboy.com/2018/10/21/C++学习一/index.html">
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
-<meta property="og:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
+<meta property="og:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819202122void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-11T13:20:29.373Z">
+<meta property="og:updated_time" content="2019-07-23T03:16:18.024Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++学习一">
-<meta name="twitter:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;#125;v">
+<meta name="twitter:description" content="函数重载C++ 支持函数重载 源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰 注意: 如果涉及到隐式转换,可能会报错,产生二义性! 12345678910111213141516171819202122void sum(long a) &amp;#123;	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;&amp;">
 
 
 
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  501
+                  575
                 </span>
               
 
@@ -457,12 +457,12 @@
         <h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><p>C++ 支持函数重载</p>
 <p>源于name mangling 或者叫 name decoration 技术, C++编译过程会对符号名(函数和参数名)进行改编,修饰</p>
 <p>注意: 如果涉及到隐式转换,可能会报错,产生二义性!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void sum(long a) &#123;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void sum(double a) &#123;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main () &#123;</span><br><span class="line">	</span><br><span class="line">	// 如果涉及到隐式转换报错</span><br><span class="line">	sum(10);</span><br><span class="line">	</span><br><span class="line">	// 如果要消除,必须新增一个参数是int的方法,消除隐式转换</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">void sum(long a) &#123;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void sum(double a) &#123;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main () &#123;</span><br><span class="line">	</span><br><span class="line">	// 这里传入int类型的10,没有找到sum传入int的方法,会出发隐式转换,但是转成成long和double都可以,编译器不知道到底调用哪个,产生二义性错误</span><br><span class="line">	sum(10);</span><br><span class="line">	</span><br><span class="line">	// 如果要消除二义性,需要定义一个sum,形参为int类型的函数,明确告诉编译器,不需要隐式转换.直接调用这个!就不会报错</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void sum(int a) &#123;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p>C++、C混合开发的时候,C++ 引用C 会出错,因为 上述的函数重载,</p>
 <p>C 默认的函数名为 _函数名,但是C++的函数名会发生变化,编译时映射表无法对应</p>
 <p>所以C++ 引用C 的时候需要使用extern,告诉编译器 某些地方使用C编译</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// sum.h</span><br><span class="line"></span><br><span class="line">#ifndef _SUM_H</span><br><span class="line">#define _SUM_H</span><br><span class="line"></span><br><span class="line">#if __cplusplus</span><br><span class="line">extern &quot;C&quot; &#123;</span><br><span class="line">#endif</span><br><span class="line">	</span><br><span class="line">	int sum(int a, int b);</span><br><span class="line"></span><br><span class="line">#if __cplusplus</span><br><span class="line">&#125;</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// sum.c</span><br><span class="line"></span><br><span class="line">#include &quot;sum.h&quot;</span><br><span class="line"></span><br><span class="line">int sum(int a, int b) &#123;</span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// sum.c</span><br><span class="line"></span><br><span class="line">#include &quot;sum.h&quot;</span><br><span class="line"></span><br><span class="line">int sum(int a, int b) &#123;</span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意: extern 可以修饰函数 <code>extern &quot;C&quot; func () {}</code> , 当函数申明和实现分离时,必须写在申明中,写在实现中会报错</p>
 <h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>函数可以带默认参数,但是默认参数的顺序是从右向左, </p>
 <p>简单来说,左边的形参没有默认参数,右边就不能有; 左边的形参有了默认参数,左边第二个才可以设置默认参数</p>
@@ -493,7 +493,7 @@
   <p><span>本文标题:</span><a href="/2018/10/21/C++学习一/">C++学习一</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2018年10月21日 - 22:10</p>
-  <p><span>最后更新:</span>2018年11月11日 - 21:11</p>
+  <p><span>最后更新:</span>2019年07月23日 - 11:07</p>
   <p><span>原始链接:</span><a href="/2018/10/21/C++学习一/" title="C++学习一">https://blog.jshowboy.com/2018/10/21/C++学习一/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://blog.jshowboy.com/2018/10/21/C++学习一/"  aria-label="复制成功！"></i></span>
   </p>
@@ -672,7 +672,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -683,7 +683,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -694,7 +694,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -868,7 +868,7 @@
 
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
-    <span class="post-count">Total Words:23.4k</span>
+    <span class="post-count">Total Words:24k</span>
   </div>
 
 
