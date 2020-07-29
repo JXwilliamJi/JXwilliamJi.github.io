@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple_icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_knowledge_32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_knowledge_16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon_logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="其他学习,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WilliamJi's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,即分贝毫瓦(decibel relative">
+<meta name="keywords" content="其他学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="家庭WIFI优化研究">
+<meta property="og:url" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/index.html">
+<meta property="og:site_name" content="WilliamJi&#39;s Blog">
+<meta property="og:description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,即分贝毫瓦(decibel relative">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/phone_meitu_1.png">
+<meta property="og:image" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/channel_meitu_2.png">
+<meta property="og:updated_time" content="2020-07-29T08:56:59.679Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="家庭WIFI优化研究">
+<meta name="twitter:description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,即分贝毫瓦(decibel relative">
+<meta name="twitter:image" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/phone_meitu_1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/">
+
+
+
+
+
+  <title>家庭WIFI优化研究 | WilliamJi's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?133b0744d4ddd3a6465d70af3789ff5a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WilliamJi's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Coder can change world!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            所有文章
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ji">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar2.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WilliamJi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">家庭WIFI优化研究</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-29T14:45:27+08:00">
+                2020-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/29/家庭WIFI优化研究/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/29/家庭WIFI优化研究/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="实现要求"><a href="#实现要求" class="headerlink" title="实现要求"></a>实现要求</h2><p>家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。</p>
+<h2 id="主要功能和参数"><a href="#主要功能和参数" class="headerlink" title="主要功能和参数"></a>主要功能和参数</h2><h3 id="信号强度"><a href="#信号强度" class="headerlink" title="信号强度"></a>信号强度</h3><p>信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响.</p>
+<h4 id="信号强度单位"><a href="#信号强度单位" class="headerlink" title="信号强度单位"></a>信号强度单位</h4><p>dBm是纯计数单位,即分贝毫瓦(decibel relative to one milliwatt),指代功率的绝对值,通常作为无线信号的强度单位。</p>
+<p>计算公式: DB = 10lgP, P = 功率值 / 1 mW。dBm 无法简单加减计算。</p>
+<h4 id="无线信号强度"><a href="#无线信号强度" class="headerlink" title="无线信号强度"></a>无线信号强度</h4><p>对于Wifi接收信号来说,通常-50~0之间信号强度很好; -75~-50之间信号强度较好,但是感觉较差; -75以下强度差,网速差。</p>
+<blockquote>
+<p>Tips 国家规定: 路由器的最大发射功率为100mW。发射功率越大意味着辐射越大。意味着发射时的信号强度为 100 dBm。如果路由器加天线,可以有2dBm的增益。</p>
+</blockquote>
+<p><img src="/2020/07/29/家庭WIFI优化研究/phone_meitu_1.png" alt=""></p>
+<h4 id="蜂窝信号强度-拓展"><a href="#蜂窝信号强度-拓展" class="headerlink" title="蜂窝信号强度(拓展)"></a>蜂窝信号强度(拓展)</h4><p>一般称之为手机信号强度. 同样以dbm为信号,手机信号有下面3个重要参数.</p>
+<ul>
+<li><p>RSRP 单个激活的子载波理论接收到的所有信号的平均值,2G,3G信号质量的关键参数.</p>
+</li>
+<li><p>RSSI 所有激活的子载波接收到的所有信号的平均值,一般可以看做信号质量,4G信号质量的关键参数.</p>
+</li>
+<li><p>RSRQ N*RSRP/RSS, N是某一区间子载波数量.</p>
+</li>
+</ul>
+<blockquote>
+<p>总结: 手机显示的信号格数其实都是RSRP信号强度, 4G使用RSSI作为参数,但是RSSI通常比RSRP小20dBm. 所以你用4G时实际的信号强度比你看到的要强20dBm.</p>
+</blockquote>
+<p>以iPhone 为例,蜂窝信号的格数显示如下</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">格数</th>
+<th style="text-align:center">5格</th>
+<th style="text-align:right">4格</th>
+<th style="text-align:center">3格</th>
+<th style="text-align:right">2格</th>
+<th style="text-align:center">1格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">信号强度</td>
+<td style="text-align:center">(*,-85)</td>
+<td style="text-align:right">(-85,-95)</td>
+<td style="text-align:center">(-95,-105)</td>
+<td style="text-align:right">(-105,-115)</td>
+<td style="text-align:center">(-115,掉网)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="强度测量"><a href="#强度测量" class="headerlink" title="强度测量"></a>强度测量</h4><p>不同端需要不同的软件测量信号强度,具体用处就是使用手机下载这些工具,检查WIFI覆盖情况.</p>
+<ul>
+<li>PC/Mac端 <a href="https://www.metageek.com/support/downloads/" target="_blank" rel="noopener">inSSIDer</a></li>
+<li>安卓App cellular-z(推荐)</li>
+<li>iPhone  WiFi信号大师</li>
+</ul>
+<h4 id="购买指南"><a href="#购买指南" class="headerlink" title="购买指南"></a>购买指南</h4><p>选择的路由器可以考虑发射功率 100mW左右的. 过高浪费电,过低信号弱.</p>
+<h3 id="频率和信道"><a href="#频率和信道" class="headerlink" title="频率和信道"></a>频率和信道</h3><p>Wi-Fi技术由IEEE 802.11a/b/g/n/ac定义,最新还有IEEE 802.11ax. 其中工作频段分为2.4G和5G两个频段,其中可以工作在2.4G频段的协议有IEEE 802.11b/g/n/ax，工作在5G频段的协议有IEEE 802.11a/n/ac/ax。</p>
+<p>2.4G WiFi中国用前13个信道,工作频率范围是2.4G-2.4835Ghz. 5G WiFi 信道较多,工作频率范围是5.15G-5.85Ghz.</p>
+<p>信道就是频宽,信道是会重叠的,相近的信道会干扰. 2.4G WiFi中1,6,11信道不重叠,所以一般通常搜索到的信道是1,6,11偏多.</p>
+<p><img src="/2020/07/29/家庭WIFI优化研究/channel_meitu_2.png" alt=""></p>
+<h3 id="无缝漫游"><a href="#无缝漫游" class="headerlink" title="无缝漫游"></a>无缝漫游</h3><p>相对于有缝漫游而言. 指的是家庭环境面积较大(数百平), 在移动中时,WiFi连接 自动完成AP和AP之间的切换,切换时间在毫秒级,基本没有丢包, 用户没有感知. </p>
+<h3 id="带机数量"><a href="#带机数量" class="headerlink" title="带机数量"></a>带机数量</h3><p>路由器最多可以支持的连接设备. 带机数通常80 - 200.</p>
+<h3 id="POE-供电"><a href="#POE-供电" class="headerlink" title="POE 供电"></a>POE 供电</h3><p>主要用在Mash 方案中. 需要支持POE供电的转换器,若没有该转换器也没关系,可以单独购买POE供电模块,说白了就是用网线直接供电.</p>
+<p>推荐: 快牛POE供电模块</p>
+<h3 id="胖AP-瘦AP-AC"><a href="#胖AP-瘦AP-AC" class="headerlink" title="胖AP,瘦AP,AC"></a>胖AP,瘦AP,AC</h3><p>AC (Wireless AccessPoint Controller) 无线接入控制单元. 主要和AP 结合使用</p>
+<p>AP (Wireless Access Point) 就是无线访问接入点(设备).</p>
+<p>Fat AP(胖AP) 一般指的是 可以独立提供SSID、认证、DHCP功能,可以给连接到此AP的设备提供IP的接入点(设备).例如一般购买的家庭低端路由器就是胖AP,功能多样但是性能孱弱.</p>
+<p>Fit AP(瘦AP) 一般指没有上述功能,需要和AC配合使用的接入点(设备).</p>
+<h2 id="常见方案"><a href="#常见方案" class="headerlink" title="常见方案"></a>常见方案</h2><h3 id="室内方案-有空完善"><a href="#室内方案-有空完善" class="headerlink" title="室内方案(有空完善)"></a>室内方案(有空完善)</h3><p>这里我们主要讨论室内方案. 主要从经济效能比来选择方案</p>
+<h4 id="AC-AP方案"><a href="#AC-AP方案" class="headerlink" title="AC+AP方案"></a>AC+AP方案</h4><p>一般AC会由软路由替代,自己选择工控还是DIY.</p>
+<p>AP 使用 斐讯K2C, 或K3</p>
+<h4 id="Mash方案"><a href="#Mash方案" class="headerlink" title="Mash方案"></a>Mash方案</h4><p>网络拓扑结构中的星状结构</p>
+<h3 id="室外方案"><a href="#室外方案" class="headerlink" title="室外方案"></a>室外方案</h3><p>一般用于工程项目的无线桥接方案,适用于户外摄像,户外通信等. 省去大量线缆的铺设,操作简单,可中继(例如中间隔座大山,就需要在山顶做中继,否则信号被遮挡).</p>
+<p>缺点: 室内信号较差. 需要采用室内方案才能达到优秀的无线传输速率;可能有干扰.</p>
+<p>常见选择: 千兆10KM网桥 + POE供电 + 无缝漫游</p>
+<p>推荐: </p>
+<p>UBNT PBE-M5-400. 实际传输距离10KM, 增益25 DBi.</p>
+<p>快牛 MAP-D525C. 实际传输距离10KM, 增益25 DBi.</p>
+<h3 id="车载方案"><a href="#车载方案" class="headerlink" title="车载方案"></a>车载方案</h3><p>车辆具有高速机动的特点,所以对无缝漫游的要求会高一点。</p>
+<p>参考文档</p>
+<p><a href="https://zhuanlan.zhihu.com/p/95210268" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/95210268</a><br><a href="https://product.pconline.com.cn/itbk/wlbg/network/1802/10851726.html" target="_blank" rel="noopener">https://product.pconline.com.cn/itbk/wlbg/network/1802/10851726.html</a><br><a href="https://www.zhihu.com/question/59991119" target="_blank" rel="noopener">https://www.zhihu.com/question/59991119</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    <!--版权信息-->
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2020/07/29/家庭WIFI优化研究/">家庭WIFI优化研究</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
+  <p><span>发布时间:</span>2020年07月29日 - 14:07</p>
+  <p><span>最后更新:</span>2020年07月29日 - 16:07</p>
+  <p><span>原始链接:</span><a href="/2020/07/29/家庭WIFI优化研究/" title="家庭WIFI优化研究">https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/Weichat.png" alt="William Ji 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/AliPay.png" alt="William Ji 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/其他学习/" rel="tag"><i class="fa fa-tag"></i> 其他学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/14/了解开源协议/" rel="next" title="了解开源协议">
+                <i class="fa fa-chevron-left"></i> 了解开源协议
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b94e14b4d0774cd" async="async"></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar2.jpeg" alt="William Ji">
+            
+              <p class="site-author-name" itemprop="name">William Ji</p>
+              <p class="site-description motion-element" itemprop="description">One minute on the stage needs ten years practice off stage!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/JXwilliamJi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://coding.net/u/Fastlane" target="_blank" title="Coding">
+                      
+                        <i class="fa fa-fw fa-random"></i>Coding</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/a2e80deb11a1" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-book"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/qq_31092987" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-rotate-right"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/8341797/william-ji" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://segmentfault.com/u/feiyuqingcheng" target="_blank" title="Segmentfault">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>Segmentfault</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:jxjmdx2009@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/justjavac/free-programming-books-zh_CN" title="iOS免费书籍资料" target="_blank">iOS免费书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="前端导航" target="_blank">前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.arduino.cn/" title="Arduino" target="_blank">Arduino</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.raspberrypi.org/" title="树莓派" target="_blank">树莓派</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.waitsun.com/" title="MacApp免费下载" target="_blank">MacApp免费下载</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ifunmac.com/" title="MacApp会员制下载" target="_blank">MacApp会员制下载</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现要求"><span class="nav-number">1.</span> <span class="nav-text">实现要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要功能和参数"><span class="nav-number">2.</span> <span class="nav-text">主要功能和参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信号强度"><span class="nav-number">2.1.</span> <span class="nav-text">信号强度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信号强度单位"><span class="nav-number">2.1.1.</span> <span class="nav-text">信号强度单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无线信号强度"><span class="nav-number">2.1.2.</span> <span class="nav-text">无线信号强度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#蜂窝信号强度-拓展"><span class="nav-number">2.1.3.</span> <span class="nav-text">蜂窝信号强度(拓展)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强度测量"><span class="nav-number">2.1.4.</span> <span class="nav-text">强度测量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#购买指南"><span class="nav-number">2.1.5.</span> <span class="nav-text">购买指南</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#频率和信道"><span class="nav-number">2.2.</span> <span class="nav-text">频率和信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无缝漫游"><span class="nav-number">2.3.</span> <span class="nav-text">无缝漫游</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带机数量"><span class="nav-number">2.4.</span> <span class="nav-text">带机数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POE-供电"><span class="nav-number">2.5.</span> <span class="nav-text">POE 供电</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#胖AP-瘦AP-AC"><span class="nav-number">2.6.</span> <span class="nav-text">胖AP,瘦AP,AC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见方案"><span class="nav-number">3.</span> <span class="nav-text">常见方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#室内方案-有空完善"><span class="nav-number">3.1.</span> <span class="nav-text">室内方案(有空完善)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AC-AP方案"><span class="nav-number">3.1.1.</span> <span class="nav-text">AC+AP方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mash方案"><span class="nav-number">3.1.2.</span> <span class="nav-text">Mash方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#室外方案"><span class="nav-number">3.2.</span> <span class="nav-text">室外方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#车载方案"><span class="nav-number">3.3.</span> <span class="nav-text">车载方案</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">William Ji</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+  
+
+
+
+
+
+  
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+    <span class="post-count">Total Words:28.8k</span>
+  </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: false,
+        appId: 'tHQNEE9Bi6ywV3plQQE5XVEg-gzGzoHsz',
+        appKey: 'WEMokMM90vN6Jpw7R1r2tqNz',
+        placeholder: '_(:з」∠)_我们一起学猫叫,一起喵喵喵喵喵',
+        avatar:'avatar2.jpeg',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":120,"height":200},"mobile":{"show":true},"log":false});</script></body>
+</html>
