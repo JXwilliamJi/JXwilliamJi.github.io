@@ -96,20 +96,20 @@
 
 
 
-<meta name="description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,即分贝毫瓦(decibel relative">
+<meta name="description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的上限，还可能由于接入点的限制而无法达到最优。 移动信号强度决定手机移动网络速率的上限,WIFI信号强度决定了WIFI的速率上限(无法突破接入端网速限制)。无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,">
 <meta name="keywords" content="其他学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="家庭WIFI优化研究">
 <meta property="og:url" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/index.html">
 <meta property="og:site_name" content="WilliamJi&#39;s Blog">
-<meta property="og:description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,即分贝毫瓦(decibel relative">
+<meta property="og:description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的上限，还可能由于接入点的限制而无法达到最优。 移动信号强度决定手机移动网络速率的上限,WIFI信号强度决定了WIFI的速率上限(无法突破接入端网速限制)。无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/phone_meitu_1.png">
 <meta property="og:image" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/channel_meitu_2.png">
-<meta property="og:updated_time" content="2020-07-29T09:05:38.901Z">
+<meta property="og:updated_time" content="2020-08-21T06:40:55.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="家庭WIFI优化研究">
-<meta name="twitter:description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,即分贝毫瓦(decibel relative">
+<meta name="twitter:description" content="实现要求家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。 主要功能和参数信号强度信号的强度通常决定了无线网速的上限，还可能由于接入点的限制而无法达到最优。 移动信号强度决定手机移动网络速率的上限,WIFI信号强度决定了WIFI的速率上限(无法突破接入端网速限制)。无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响. 信号强度单位dBm是纯计数单位,">
 <meta name="twitter:image" content="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/phone_meitu_1.png">
 
 
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.4k
+                  1.6k
                 </span>
               
 
@@ -434,7 +434,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -456,19 +456,27 @@
 
       
         <h2 id="实现要求"><a href="#实现要求" class="headerlink" title="实现要求"></a>实现要求</h2><p>家庭WIFI部署低成本、可扩展、支持无缝漫游、信号强网速快(达到或接近千兆)。</p>
-<h2 id="主要功能和参数"><a href="#主要功能和参数" class="headerlink" title="主要功能和参数"></a>主要功能和参数</h2><h3 id="信号强度"><a href="#信号强度" class="headerlink" title="信号强度"></a>信号强度</h3><p>信号的强度通常决定了无线网速的好坏. 4G信号强度决定4G速率的好坏,WIFI信号强度决定了WIFI的速率好坏(无法突破接入端网速限制).无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响.</p>
-<h4 id="信号强度单位"><a href="#信号强度单位" class="headerlink" title="信号强度单位"></a>信号强度单位</h4><p>dBm是纯计数单位,即分贝毫瓦(decibel relative to one milliwatt),指代功率的绝对值,通常作为无线信号的强度单位。</p>
-<p>计算公式: DB = 10lgP, P = 功率值 / 1 mW。dBm 无法简单加减计算。</p>
-<h4 id="无线信号强度"><a href="#无线信号强度" class="headerlink" title="无线信号强度"></a>无线信号强度</h4><p>对于Wifi接收信号来说,通常-50~0之间信号强度很好; -75~-50之间信号强度较好,但是感觉较差; -75以下强度差,网速差。</p>
+<h2 id="主要功能和参数"><a href="#主要功能和参数" class="headerlink" title="主要功能和参数"></a>主要功能和参数</h2><h3 id="信号强度"><a href="#信号强度" class="headerlink" title="信号强度"></a>信号强度</h3><p>信号的强度通常决定了无线网速的上限，还可能由于接入点的限制而无法达到最优。 移动信号强度决定手机移动网络速率的上限,WIFI信号强度决定了WIFI的速率上限(无法突破接入端网速限制)。无线信号强度和距离成反比,和发射功率成正比,还会受到其他一些因素的影响.</p>
+<h4 id="信号强度单位"><a href="#信号强度单位" class="headerlink" title="信号强度单位"></a>信号强度单位</h4><p>dBm是纯计数单位,即分贝毫瓦(decibel relative to one milliwatt),指代功率的绝对值,通常作为无线信号的强度单位。（以1mW为基准，功率大于这个数为正，小于为负）</p>
+<p>计算公式: dBm = 10lgP, P = 功率值 / 1 mW。dBm 无法简单加减计算。</p>
+<p>dBm相减得到dB，表示的是倍数关系。3dB表示原来功率是2倍关系。</p>
+<h4 id="无线信号强度"><a href="#无线信号强度" class="headerlink" title="无线信号强度"></a>无线信号强度</h4><p>信号强度分为发射强度和接收强度。发射的强度会随时间和空间的蔓延而有所衰减。</p>
+<p>对于Wifi接收信号来说,通常-50~0之间信号强度很好; -75~-50之间信号强度较好,但是感觉较差; -75以下强度差,网速差。</p>
 <blockquote>
 <p>Tips 国家规定: 路由器的最大发射功率为100mW。发射功率越大意味着辐射越大。意味着发射时的信号强度为 100 dBm。如果路由器加天线,可以有2dBm的增益。</p>
 </blockquote>
 <p><img src="/2020/07/29/家庭WIFI优化研究/phone_meitu_1.png" alt=""></p>
+<h4 id="信号强度和距离关系"><a href="#信号强度和距离关系" class="headerlink" title="信号强度和距离关系"></a>信号强度和距离关系</h4><p>发射设备到接收设备之间，波会逐步损耗，这个损耗称之为自由空间路径损耗。</p>
+<blockquote>
+<p>自由空间路径损耗： <code>FS(dB) = 20lg(d) + 20lg(f) + K</code>,d 距离km  f 频率MHz</p>
+</blockquote>
+<p>接收端功率很难到达1mw，所以0dBm我们认为是理想状态。正常状态都是负的。</p>
+<p>RSSI(RSCP) = 发射强度（dBm） + 天线增益（dBi）- 自由空间路径损耗（dB） - 多路径衰减（dB）- 阻断衰减（水泥墙15-30dB）</p>
 <h4 id="蜂窝信号强度-拓展"><a href="#蜂窝信号强度-拓展" class="headerlink" title="蜂窝信号强度(拓展)"></a>蜂窝信号强度(拓展)</h4><p>一般称之为手机信号强度. 同样以dbm为信号,手机信号有下面3个重要参数.</p>
 <ul>
-<li><p>RSRP 单个激活的子载波理论接收到的所有信号的平均值,2G,3G信号质量的关键参数.</p>
+<li><p>RSRP 2/3G信号接收强度关键参数。单个激活的子载波理论接收到的所有信号的平均值,2G,3G信号质量的关键参数.</p>
 </li>
-<li><p>RSSI 所有激活的子载波接收到的所有信号的平均值,一般可以看做信号质量,4G信号质量的关键参数.</p>
+<li><p>RSSI 4G信号接收强度关键参数。所有激活的子载波接收到的所有信号的平均值,一般可以看做信号质量,4G信号质量的关键参数。</p>
 </li>
 <li><p>RSRQ N*RSRP/RSS, N是某一区间子载波数量.</p>
 </li>
@@ -551,7 +559,7 @@
   <p><span>本文标题:</span><a href="/2020/07/29/家庭WIFI优化研究/">家庭WIFI优化研究</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 William Ji 的个人博客">William Ji</a></p>
   <p><span>发布时间:</span>2020年07月29日 - 14:07</p>
-  <p><span>最后更新:</span>2020年07月29日 - 17:07</p>
+  <p><span>最后更新:</span>2020年08月21日 - 14:08</p>
   <p><span>原始链接:</span><a href="/2020/07/29/家庭WIFI优化研究/" title="家庭WIFI优化研究">https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://blog.jshowboy.com/2020/07/29/家庭WIFI优化研究/" aria-label="复制成功！"></i></span>
   </p>
@@ -872,7 +880,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现要求"><span class="nav-number">1.</span> <span class="nav-text">实现要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要功能和参数"><span class="nav-number">2.</span> <span class="nav-text">主要功能和参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信号强度"><span class="nav-number">2.1.</span> <span class="nav-text">信号强度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信号强度单位"><span class="nav-number">2.1.1.</span> <span class="nav-text">信号强度单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无线信号强度"><span class="nav-number">2.1.2.</span> <span class="nav-text">无线信号强度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#蜂窝信号强度-拓展"><span class="nav-number">2.1.3.</span> <span class="nav-text">蜂窝信号强度(拓展)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强度测量"><span class="nav-number">2.1.4.</span> <span class="nav-text">强度测量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#购买指南"><span class="nav-number">2.1.5.</span> <span class="nav-text">购买指南</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#频率和信道"><span class="nav-number">2.2.</span> <span class="nav-text">频率和信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无缝漫游"><span class="nav-number">2.3.</span> <span class="nav-text">无缝漫游</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带机数量"><span class="nav-number">2.4.</span> <span class="nav-text">带机数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POE-供电"><span class="nav-number">2.5.</span> <span class="nav-text">POE 供电</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#胖AP-瘦AP-AC"><span class="nav-number">2.6.</span> <span class="nav-text">胖AP,瘦AP,AC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见方案"><span class="nav-number">3.</span> <span class="nav-text">常见方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#室内方案-有空完善"><span class="nav-number">3.1.</span> <span class="nav-text">室内方案(有空完善)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AC-AP方案"><span class="nav-number">3.1.1.</span> <span class="nav-text">AC+AP方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mash方案"><span class="nav-number">3.1.2.</span> <span class="nav-text">Mash方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#室外方案"><span class="nav-number">3.2.</span> <span class="nav-text">室外方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#车载方案"><span class="nav-number">3.3.</span> <span class="nav-text">车载方案</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现要求"><span class="nav-number">1.</span> <span class="nav-text">实现要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要功能和参数"><span class="nav-number">2.</span> <span class="nav-text">主要功能和参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信号强度"><span class="nav-number">2.1.</span> <span class="nav-text">信号强度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信号强度单位"><span class="nav-number">2.1.1.</span> <span class="nav-text">信号强度单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无线信号强度"><span class="nav-number">2.1.2.</span> <span class="nav-text">无线信号强度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#信号强度和距离关系"><span class="nav-number">2.1.3.</span> <span class="nav-text">信号强度和距离关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#蜂窝信号强度-拓展"><span class="nav-number">2.1.4.</span> <span class="nav-text">蜂窝信号强度(拓展)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强度测量"><span class="nav-number">2.1.5.</span> <span class="nav-text">强度测量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#购买指南"><span class="nav-number">2.1.6.</span> <span class="nav-text">购买指南</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#频率和信道"><span class="nav-number">2.2.</span> <span class="nav-text">频率和信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无缝漫游"><span class="nav-number">2.3.</span> <span class="nav-text">无缝漫游</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带机数量"><span class="nav-number">2.4.</span> <span class="nav-text">带机数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POE-供电"><span class="nav-number">2.5.</span> <span class="nav-text">POE 供电</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#胖AP-瘦AP-AC"><span class="nav-number">2.6.</span> <span class="nav-text">胖AP,瘦AP,AC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见方案"><span class="nav-number">3.</span> <span class="nav-text">常见方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#室内方案-有空完善"><span class="nav-number">3.1.</span> <span class="nav-text">室内方案(有空完善)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AC-AP方案"><span class="nav-number">3.1.1.</span> <span class="nav-text">AC+AP方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mash方案"><span class="nav-number">3.1.2.</span> <span class="nav-text">Mash方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#室外方案"><span class="nav-number">3.2.</span> <span class="nav-text">室外方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#车载方案"><span class="nav-number">3.3.</span> <span class="nav-text">车载方案</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -918,7 +926,7 @@
 
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
-    <span class="post-count">Total Words:29k</span>
+    <span class="post-count">Total Words:29.3k</span>
   </div>
 
 
