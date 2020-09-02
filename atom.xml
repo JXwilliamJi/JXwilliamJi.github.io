@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jshowboy.com/"/>
-  <updated>2020-09-02T01:54:58.184Z</updated>
+  <updated>2020-09-02T02:03:54.916Z</updated>
   <id>https://blog.jshowboy.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.jshowboy.com/2020/09/02/%E5%A6%82%E4%BD%95%E9%80%89%E8%B4%AD-SSD/"/>
     <id>https://blog.jshowboy.com/2020/09/02/如何选购-SSD/</id>
     <published>2020-09-02T00:29:04.000Z</published>
-    <updated>2020-09-02T01:54:58.184Z</updated>
+    <updated>2020-09-02T02:03:54.916Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="SSD是什么"><a href="#SSD是什么" class="headerlink" title="SSD是什么"></a>SSD是什么</h3><p>SSD 即Solid State Disk，翻译为固态硬盘。</p><h3 id="SSD-的组成"><a href="#SSD-的组成" class="headerlink" title="SSD 的组成"></a>SSD 的组成</h3><p>SSD 通常由主控芯片、缓存颗粒、闪存芯片组成。</p><blockquote><p>主控芯片</p></blockquote><p>主控芯片就是 SSD 的大脑，它涉及到数据处理能力、算法、读写等操作。好的主控在性能和传输速度会比一般的主控快数倍以上。</p><blockquote><p>缓存颗粒</p></blockquote><p>缓存颗粒主要用于小文件的缓存，防止对闪存芯片过多的存取，有效提高SSD寿命。有些廉价的SSD为了节省成本会省去这部分，导致寿命缩减。目前TLC、QLC通过做大缓存来</p><blockquote><p>闪存芯片</p></blockquote><p>NAND Flash闪存芯片占据硬盘中的大部分面积。目前闪存因为存储层叠的不同分为SLC（单层单元）、MLC（多层单元）、TLC（三层单元）、QLC（四层单元）。</p><h3 id="SSD-容量"><a href="#SSD-容量" class="headerlink" title="SSD 容量"></a>SSD 容量</h3><p>厂商标注的500G为何检测就剩下470？</p><p>厂商出厂是按照1KB = 1000B，1MB = 1000KB这种千位进制，所以1GB大约10⁹B。而电脑是二进制的，1KB = 2¹⁰B，所以1KB在电脑上等于1024B。因此厂商标注的1GB电脑会显示0.9765G，500G显示约为488G。加上损耗误差预留还有良心的缺失，可能小于这个数。</p><h3 id="SSD-层叠差异"><a href="#SSD-层叠差异" class="headerlink" title="SSD 层叠差异"></a>SSD 层叠差异</h3><p>先上一张图<br><img src="/2020/09/02/如何选购-SSD/slc01" alt=""></p><p>SLC（单层单元）Single-Level Cell。表明1bit/cell，每个单元存储1bit的数据。约有10万次的擦写寿命（P/E寿命）。但是价格贵，同容量约为MLC的3倍以上。适合发烧友，理论寿命10年以上。SLC难以做大容量，所以维持在250G左右。</p><h3 id="SSD-不同介质的区别"><a href="#SSD-不同介质的区别" class="headerlink" title="SSD 不同介质的区别"></a>SSD 不同介质的区别</h3><h3 id="SSD-选购关注的重要参数"><a href="#SSD-选购关注的重要参数" class="headerlink" title="SSD 选购关注的重要参数"></a>SSD 选购关注的重要参数</h3><h3 id="SSD-如何选购"><a href="#SSD-如何选购" class="headerlink" title="SSD 如何选购"></a>SSD 如何选购</h3><p>一般用户</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="SSD是什么"><a href="#SSD是什么" class="headerlink" title="SSD是什么"></a>SSD是什么</h3><p>SSD 即Solid State Disk，翻译为固态硬盘。</p><h3 id="SSD-的组成"><a href="#SSD-的组成" class="headerlink" title="SSD 的组成"></a>SSD 的组成</h3><p>SSD 通常由主控芯片、缓存颗粒、闪存芯片组成。</p><blockquote><p>主控芯片</p></blockquote><p>主控芯片就是 SSD 的大脑，它涉及到数据处理能力、算法、读写等操作。好的主控在性能和传输速度会比一般的主控快数倍以上。</p><blockquote><p>缓存颗粒</p></blockquote><p>缓存颗粒主要用于小文件的缓存，防止对闪存芯片过多的存取，有效提高SSD寿命。有些廉价的SSD为了节省成本会省去这部分，导致寿命缩减。目前TLC、QLC通过做大缓存来</p><blockquote><p>闪存芯片</p></blockquote><p>NAND Flash闪存芯片占据硬盘中的大部分面积。目前闪存因为存储层叠的不同分为SLC（单层单元）、MLC（多层单元）、TLC（三层单元）、QLC（四层单元）。</p><h3 id="SSD-容量"><a href="#SSD-容量" class="headerlink" title="SSD 容量"></a>SSD 容量</h3><p>厂商标注的500G为何检测就剩下470？</p><p>厂商出厂是按照1KB = 1000B，1MB = 1000KB这种千位进制，所以1GB大约10⁹B。而电脑是二进制的，1KB = 2¹⁰B，所以1KB在电脑上等于1024B。因此厂商标注的1GB电脑会显示0.9765G，500G显示约为488G。加上损耗误差预留还有良心的缺失，可能小于这个数。</p><h3 id="SSD-层叠差异"><a href="#SSD-层叠差异" class="headerlink" title="SSD 层叠差异"></a>SSD 层叠差异</h3><p>先上一张图</p><p><img src="/2020/09/02/如何选购-SSD/slc01.png" alt=""></p><p>SLC（单层单元）Single-Level Cell。表明1bit/cell，每个单元存储1bit的数据。约有10万次的擦写寿命（P/E寿命）。但是价格贵，同容量约为MLC的3倍以上。适合发烧友，理论寿命10年以上。SLC难以做大容量，所以维持在250G左右。</p><h3 id="SSD-不同介质的区别"><a href="#SSD-不同介质的区别" class="headerlink" title="SSD 不同介质的区别"></a>SSD 不同介质的区别</h3><h3 id="SSD-选购关注的重要参数"><a href="#SSD-选购关注的重要参数" class="headerlink" title="SSD 选购关注的重要参数"></a>SSD 选购关注的重要参数</h3><h3 id="SSD-如何选购"><a href="#SSD-如何选购" class="headerlink" title="SSD 如何选购"></a>SSD 如何选购</h3><p>一般用户</p>]]></content>
     
     <summary type="html">
     
