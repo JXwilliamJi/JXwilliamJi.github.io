@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jshowboy.com/"/>
-  <updated>2021-02-05T01:08:36.356Z</updated>
+  <updated>2021-02-05T01:54:05.903Z</updated>
   <id>https://blog.jshowboy.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Mac Bigsur AppleID无法登陆</title>
-    <link href="https://blog.jshowboy.com/2021/02/05/Mac%20Bigsur%20AppleID%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/"/>
-    <id>https://blog.jshowboy.com/2021/02/05/Mac Bigsur AppleID无法登陆/</id>
-    <published>2021-02-05T06:45:27.000Z</published>
-    <updated>2021-02-05T01:08:36.356Z</updated>
+    <link href="https://blog.jshowboy.com/2021/02/04/Mac%20Bigsur%20AppleID%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/"/>
+    <id>https://blog.jshowboy.com/2021/02/04/Mac Bigsur AppleID无法登陆/</id>
+    <published>2021-02-04T06:45:27.000Z</published>
+    <updated>2021-02-05T01:54:05.903Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>心血来潮，下载升级了Bigsur体验新版本。升级完新版本后一切都好，但是出现了一个超级大问题，macbook的appleid、icloudid无法登陆，密码输入正确时，闪一下回退到重新登录页面，如此反复~~~</p><p>百度基本找不到正确答案，都是些弱智问题和弱智解答。排名靠前的基本都是水文，再一次对百度失望，求助Google。</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul><li><p>打开终端</p></li><li><p>进入目标目录 <code>cd /Users/用户名/Library/Keychains</code>，</p><blockquote><p>注意：用户名替换为自己的真实用户名</p></blockquote></li><li><p>拷贝目录下所有内容到一个随机区域，有备无患</p></li><li>移除目录下所有文件  <code>rm -rf *</code>,询问是否都确认删除，输入<code>y</code></li><li>重启电脑，重新登录即可解决</li></ul><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>推荐：别再用百度搜索了，搜索出来的都是什么玩意~</p><p>google 还找到一个<a href="https://discussions.apple.com/thread/252052631" target="_blank" rel="noopener">方案</a>,这个方案信息损失比较大，如果想顺便清理下桌面可以考虑。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://discussions.apple.com/thread/252052369?answerId=254265519022#254265519022" target="_blank" rel="noopener">https://discussions.apple.com/thread/252052369?answerId=254265519022#254265519022</a></p>]]></content>
     
